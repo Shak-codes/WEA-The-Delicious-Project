@@ -1,7 +1,7 @@
 {
     "data": [
         {
-            "franchise": [
+            "franchises": [
                 {
                     "id": 1,
                     "name": "Popeyes",
@@ -33,7 +33,7 @@
             ]
         },
         {
-            "restaurant": [
+            "restaurants": [
                 {
                     "id": 1,
                     "name": "Scaramouche",
@@ -237,7 +237,7 @@
             ]
         },
         {
-            "genre": [
+            "genres": [
                 {
                     "id": 1,
                     "name": "Fast Food"
