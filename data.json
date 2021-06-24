@@ -235,6 +235,26 @@
                     "name": "Brampton"
                 }
             ]
+        },
+        {
+            "genre": [
+                {
+                    "id": 1,
+                    "name": "Fast Food"
+                },
+                {
+                    "id": 2,
+                    "name": "Fine Dining"
+                },
+                {
+                    "id": 3,
+                    "name": "Diner"
+                },
+                {
+                    "id": 4,
+                    "name": "Buffet"
+                }
+            ]
         }
     ]
 }
