@@ -9,9 +9,11 @@ module.exports = gql `
         location(id: ID!): Location
         genre(id: ID!): Genre
     }
+
     type AllReviews {
         reviews: [Review]
     }
+
     type Franchise {
         id: ID!
         name: String!
@@ -19,6 +21,7 @@ module.exports = gql `
         genre: [Genre]
         locations: [Location]
     }
+
     type Restaurant {
         id: ID!
         name: String!
@@ -26,17 +29,35 @@ module.exports = gql `
         hours: String!
         reviews: [Review]
     }
+
     type Location {
         id: ID!
         name: String!
     }
+
     type Genre {
         id: ID!
         name: String!
     }
+
     type Review {
         id: ID!
         description: String
         rating: Int!
+    }
+
+    type Mutation {
+        addReview(
+            input: addReviewDetails
+        ): reviewAdded
+    }
+
+    input addReviewDetails {
+        restaurant_id: ID!
+        review_id: ID!
+    }
+
+    type reviewAdded {
+        review: Review
     }
 `;
