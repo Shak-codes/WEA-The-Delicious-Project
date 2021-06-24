@@ -1,260 +1,252 @@
 {
-    "data": [
-        {
-            "franchises": [
-                {
-                    "id": 1,
-                    "name": "Popeyes",
-                    "description": "We distinguish ourself with a unique New Orleans style menu.",
-                    "genre": "Fast Food",
-                    "locations": ["Toronto", "Ottawa", "Brampton"]
-                },
-                {
-                    "id": 2,
-                    "name": "Scaramouche",
-                    "description": "Sophisticated French haute cuisine in an upscale space with skyline views",
-                    "genre": "Fine Dining",
-                    "locations": ["Toronto", "Ottawa"] 
-                },
-                {
-                    "id": 3,
-                    "name": "The Ace",
-                    "description": "A restored diner serving comfort-food classics & late-night bar snacks, plus weekend brunch.",
-                    "genre": "Diner",
-                    "locations": ["Waterloo", "Brampton"] 
-                },
-                {
-                    "id": 4,
-                    "name": "Mandarin",
-                    "description": "We celebrate life’s special moments and everyday wins with high quality food, a warm atmosphere and friendly service for our customers.",
-                    "genre": "Buffet",
-                    "locations": ["Toronto", "Waterloo", "Ottawa"] 
-                }
-            ]
-        },
-        {
-            "restaurants": [
-                {
-                    "id": 1,
-                    "name": "Scaramouche",
-                    "location": "Toronto",
-                    "hours": "6pm - 12am",
-                    "reviews": [
-                        {
-                            "id": 1,
-                            "description": "Good food, good service! I highly recommend the signature coconut cream pie, it was divine.",
-                            "rating": 5
-                        },
-                        {
-                            "id": 2,
-                            "description": "Definitely pricey but well worth it! The food was delicious, and we had a stunning view of downtown Toronto. Reservations are a must as the place is always full.",
-                            "rating": 4
-                        }
-                    ]
-                },
-                {
-                    "id": 2,
-                    "name": "Popeyes",
-                    "location": "Toronto",
-                    "hours": "8am - 8pm",
-                    "reviews": [
-                        {
-                            "id": 1,
-                            "description": "Service is slow at this location. Other than that, the food was decent (can't really go wrong with Popeyes). Chicken was crispy, biscuits were great. Only complaint is that the fries were soggy.",
-                            "rating": 3
-                        },
-                        {
-                            "id": 2,
-                            "description": "If I could give no stars, I would. Staff messed up my order, and the manager was rude when I confronted him about it. Worst customer experience in my life. Also, the food was terrible, it tasted like they deep fried a rubber chicken.",
-                            "rating": 1
-                        }
-                    ]
-                },
-                {
-                    "id": 3,
-                    "name": "Popeyes",
-                    "location": "Brampton",
-                    "hours": "9am - 8pm",
-                    "reviews": [
-                        {
-                            "id": 1,
-                            "description": "Fantastic chicken. Always fresh and crispy.",
-                            "rating": 5
-                        },
-                        {
-                            "id": 2,
-                            "description": "We spend our money in this pandemic to give you business and try to be loyal customers. But in return we are not served up to standard.",
-                            "rating": 1
-                        }
-                    ]
-                },
-                {
-                    "id": 4,
-                    "name": "Scaramouche",
-                    "location": "Ottawa",
-                    "hours": "5pm - 11pm",
-                    "reviews": [
-                        {
-                            "id": 1,
-                            "description": "Food was absolutely delicious and service was attentive but not overbearing. Water was accidentally added to a vodka soda cocktail. The portion sizes are perfect",
-                            "rating": 4
-                        },
-                        {
-                            "id": 2,
-                            "description": "Classic cuisine - and a local fav going back generations for good reason. Splendid wine list available even in covid lock down times. Highly recommended",
-                            "rating": 5
-                        }
-                    ]
-                },
-                {
-                    "id": 5,
-                    "name": "Mandarin",
-                    "location": "Toronto",
-                    "hours": "10am - 5pm",
-                    "reviews": [
-                        {
-                            "id": 1,
-                            "description": "Fairly priced, lots of variety in food, great taste, I will come again.",
-                            "rating": 4
-                        },
-                        {
-                            "id": 2,
-                            "description": "I drop by every week, the food is SO good.",
-                            "rating": 5
-                        }
-                    ]
-                },
-                {
-                    "id": 6,
-                    "name": "Popeyes",
-                    "location": "Ottawa",
-                    "hours": "9am - 6pm",
-                    "reviews": [
-                        {
-                            "id": 1,
-                            "description": "Soggy buns and mediocre chicken. Don't get the chicken sandwich. Even better, do yourself a favour and don't eat here.",
-                            "rating": 1
-                        },
-                        {
-                            "id": 2,
-                            "description": "Decent food, service was a little slow though.",
-                            "rating": 3
-                        }
-                    ]
-                },
-                {
-                    "id": 7,
-                    "name": "Mandarin",
-                    "location": "Ottawa",
-                    "hours": "10am - 8pm",
-                    "reviews": [
-                        {
-                            "id": 1,
-                            "description": "Maybe it's just me but this Mandarin's food just isn't good. It's nothing compared to the Mandarin in Waterloo.",
-                            "rating": 2
-                        },
-                        {
-                            "id": 2,
-                            "description": "I've always been a sucker for Mandarin's chicken and all these years they have yet to fail me.",
-                            "rating": 5
-                        }
-                    ]
-                },
-                {
-                    "id": 8,
-                    "name": "Mandarin",
-                    "location": "Waterloo",
-                    "hours": "10am - 10pm",
-                    "reviews": [
-                        {
-                            "id": 1,
-                            "description": "This Mandarin is leagues above the Mandarin from Ottawa. The food has that classic Mandarin feel, I highly recommend this place.",
-                            "rating": 4
-                        },
-                        {
-                            "id": 2,
-                            "description": "The service could be better, but the food is just too good. A buffet for this good a price would make anyone happy.",
-                            "rating": 4
-                        }
-                    ]
-                },
-                {
-                    "id": 9,
-                    "name": "The Ace",
-                    "location": "Waterloo",
-                    "hours": "2pm - 10pm",
-                    "reviews": [
-                        {
-                            "id": 1,
-                            "description": "Been going to The Ace for years now and the food feels just the same as it did my first time here. Amazing.",
-                            "rating": 5
-                        },
-                        {
-                            "id": 2,
-                            "description": "There's just no other place that can compare to this place. You're missing out if you don't eat here once in your life.",
-                            "rating": 5
-                        }
-                    ]
-                },
-                {
-                    "id": 10,
-                    "name": "The Ace",
-                    "location": "Brampton",
-                    "hours": "12pm - 12am",
-                    "reviews": [
-                        {
-                            "id": 1,
-                            "description": "The food is good but it doesn't strike me as anything fancy. There's a lot of places that serve comfort food just as good. Still, not a bad place to go for a meal.",
-                            "rating": 4
-                        },
-                        {
-                            "id": 2,
-                            "description": "Stumbled upon this place late at night and the service at the bar is amazing. Great, hard-working, passionate people work here and it really shows.",
-                            "rating": 5
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "locations": [
-                {
-                    "id": 1,
-                    "name": "Toronto"
-                },
-                {
-                    "id": 2,
-                    "name": "Waterloo"
-                },
-                {
-                    "id": 3,
-                    "name": "Ottawa"
-                },
-                {
-                    "id": 4,
-                    "name": "Brampton"
-                }
-            ]
-        },
-        {
-            "genres": [
-                {
-                    "id": 1,
-                    "name": "Fast Food"
-                },
-                {
-                    "id": 2,
-                    "name": "Fine Dining"
-                },
-                {
-                    "id": 3,
-                    "name": "Diner"
-                },
-                {
-                    "id": 4,
-                    "name": "Buffet"
-                }
-            ]
-        }
+  "data": {
+    "franchises": [
+      {
+        "id": 1,
+        "name": "Popeyes",
+        "description": "We distinguish ourself with a unique New Orleans style menu.",
+        "genre": "Fast Food",
+        "locations": ["Toronto", "Ottawa", "Brampton"]
+      },
+      {
+        "id": 2,
+        "name": "Scaramouche",
+        "description": "Sophisticated French haute cuisine in an upscale space with skyline views",
+        "genre": "Fine Dining",
+        "locations": ["Toronto", "Ottawa"]
+      },
+      {
+        "id": 3,
+        "name": "The Ace",
+        "description": "A restored diner serving comfort-food classics & late-night bar snacks, plus weekend brunch.",
+        "genre": "Diner",
+        "locations": ["Waterloo", "Brampton"]
+      },
+      {
+        "id": 4,
+        "name": "Mandarin",
+        "description": "We celebrate life’s special moments and everyday wins with high quality food, a warm atmosphere and friendly service for our customers.",
+        "genre": "Buffet",
+        "locations": ["Toronto", "Waterloo", "Ottawa"]
+      }
+    ],
+    "restaurants": [
+      {
+        "id": 1,
+        "name": "Scaramouche",
+        "location": "Toronto",
+        "hours": "6pm - 12am",
+        "reviews": [
+          {
+            "id": 1,
+            "description": "Good food, good service! I highly recommend the signature coconut cream pie, it was divine.",
+            "rating": 5
+          },
+          {
+            "id": 2,
+            "description": "Definitely pricey but well worth it! The food was delicious, and we had a stunning view of downtown Toronto. Reservations are a must as the place is always full.",
+            "rating": 4
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Popeyes",
+        "location": "Toronto",
+        "hours": "8am - 8pm",
+        "reviews": [
+          {
+            "id": 1,
+            "description": "Service is slow at this location. Other than that, the food was decent (can't really go wrong with Popeyes). Chicken was crispy, biscuits were great. Only complaint is that the fries were soggy.",
+            "rating": 3
+          },
+          {
+            "id": 2,
+            "description": "If I could give no stars, I would. Staff messed up my order, and the manager was rude when I confronted him about it. Worst customer experience in my life. Also, the food was terrible, it tasted like they deep fried a rubber chicken.",
+            "rating": 1
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Popeyes",
+        "location": "Brampton",
+        "hours": "9am - 8pm",
+        "reviews": [
+          {
+            "id": 1,
+            "description": "Fantastic chicken. Always fresh and crispy.",
+            "rating": 5
+          },
+          {
+            "id": 2,
+            "description": "We spend our money in this pandemic to give you business and try to be loyal customers. But in return we are not served up to standard.",
+            "rating": 1
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Scaramouche",
+        "location": "Ottawa",
+        "hours": "5pm - 11pm",
+        "reviews": [
+          {
+            "id": 1,
+            "description": "Food was absolutely delicious and service was attentive but not overbearing. Water was accidentally added to a vodka soda cocktail. The portion sizes are perfect",
+            "rating": 4
+          },
+          {
+            "id": 2,
+            "description": "Classic cuisine - and a local fav going back generations for good reason. Splendid wine list available even in covid lock down times. Highly recommended",
+            "rating": 5
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Mandarin",
+        "location": "Toronto",
+        "hours": "10am - 5pm",
+        "reviews": [
+          {
+            "id": 1,
+            "description": "Fairly priced, lots of variety in food, great taste, I will come again.",
+            "rating": 4
+          },
+          {
+            "id": 2,
+            "description": "I drop by every week, the food is SO good.",
+            "rating": 5
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Popeyes",
+        "location": "Ottawa",
+        "hours": "9am - 6pm",
+        "reviews": [
+          {
+            "id": 1,
+            "description": "Soggy buns and mediocre chicken. Don't get the chicken sandwich. Even better, do yourself a favour and don't eat here.",
+            "rating": 1
+          },
+          {
+            "id": 2,
+            "description": "Decent food, service was a little slow though.",
+            "rating": 3
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Mandarin",
+        "location": "Ottawa",
+        "hours": "10am - 8pm",
+        "reviews": [
+          {
+            "id": 1,
+            "description": "Maybe it's just me but this Mandarin's food just isn't good. It's nothing compared to the Mandarin in Waterloo.",
+            "rating": 2
+          },
+          {
+            "id": 2,
+            "description": "I've always been a sucker for Mandarin's chicken and all these years they have yet to fail me.",
+            "rating": 5
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Mandarin",
+        "location": "Waterloo",
+        "hours": "10am - 10pm",
+        "reviews": [
+          {
+            "id": 1,
+            "description": "This Mandarin is leagues above the Mandarin from Ottawa. The food has that classic Mandarin feel, I highly recommend this place.",
+            "rating": 4
+          },
+          {
+            "id": 2,
+            "description": "The service could be better, but the food is just too good. A buffet for this good a price would make anyone happy.",
+            "rating": 4
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "The Ace",
+        "location": "Waterloo",
+        "hours": "2pm - 10pm",
+        "reviews": [
+          {
+            "id": 1,
+            "description": "Been going to The Ace for years now and the food feels just the same as it did my first time here. Amazing.",
+            "rating": 5
+          },
+          {
+            "id": 2,
+            "description": "There's just no other place that can compare to this place. You're missing out if you don't eat here once in your life.",
+            "rating": 5
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "The Ace",
+        "location": "Brampton",
+        "hours": "12pm - 12am",
+        "reviews": [
+          {
+            "id": 1,
+            "description": "The food is good but it doesn't strike me as anything fancy. There's a lot of places that serve comfort food just as good. Still, not a bad place to go for a meal.",
+            "rating": 4
+          },
+          {
+            "id": 2,
+            "description": "Stumbled upon this place late at night and the service at the bar is amazing. Great, hard-working, passionate people work here and it really shows.",
+            "rating": 5
+          }
+        ]
+      }
+    ],
+    "locations": [
+      {
+        "id": 1,
+        "name": "Toronto"
+      },
+      {
+        "id": 2,
+        "name": "Waterloo"
+      },
+      {
+        "id": 3,
+        "name": "Ottawa"
+      },
+      {
+        "id": 4,
+        "name": "Brampton"
+      }
+    ],
+    "genres": [
+      {
+        "id": 1,
+        "name": "Fast Food"
+      },
+      {
+        "id": 2,
+        "name": "Fine Dining"
+      },
+      {
+        "id": 3,
+        "name": "Diner"
+      },
+      {
+        "id": 4,
+        "name": "Buffet"
+      }
     ]
+  }
 }
