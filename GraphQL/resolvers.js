@@ -22,7 +22,7 @@ const Query = {
         const { restaurant_id } = args;
         const response = await fetch(`${API_URL}/restaurants/${restaurant_id}/reviews`);
         const arrayOfReviews = await response.json();
-        return arrayOfReviews;
+        return { reviews: arrayOfReviews };
     },
     // Query for GET individual restaurant reviews by restaurant and ID
     review: async (parent, args, context, info) => {

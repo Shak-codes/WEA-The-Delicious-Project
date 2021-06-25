@@ -4,7 +4,7 @@ module.exports = gql`
     type Query {
         franchise(id: ID!): Franchise
         restaurant(id: ID!): Restaurant
-        allReviews(restaurant_id: ID!): [AllReviews]
+        allReviews(restaurant_id: ID!): AllReviews
         review(restaurant_id: ID!, review_id: ID!): Review
         location(id: ID!): Location
         genre(id: ID!): Genre
