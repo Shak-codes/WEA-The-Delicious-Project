@@ -56,7 +56,13 @@ const Query = {
         const response = await fetch(`${API_URL}/locations`);
         const allLocations = await response.json();
         return allLocations;
-    }
+    },
+    // Query for GET all restaurants
+    allRestaurants: async (parent, args, context, infor) => {
+        const response = await fetch(`${API_URL}/restaurants`);
+        const allRestaurants = await response.json();
+        return allRestaurants;
+    },
 };
 
 const Franchise = {
@@ -84,7 +90,7 @@ const Restaurant = {
         const locationName = parent.location;
         const response = await fetch(`${API_URL}/locations`);
         const arrayOfLocations = await response.json();
-        const location = arrayOfLocations.find(l => l.name == locationName);
+        const location = arrayOfLocations.find(l => l.name === locationName);
         return location;
     }
 };

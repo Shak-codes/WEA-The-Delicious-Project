@@ -10,6 +10,7 @@ module.exports = gql`
         genre(id: ID!): Genre
         allGenres: [Genre]
         allLocations: [Location]
+        allRestaurants: [Restaurant]
     }
 
     type AllReviews {
