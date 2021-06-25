@@ -20,7 +20,7 @@ const Query = {
     // Query for GET genre by id
     genre: async (parent, args, context, info) => {
         const { id } = args;
-        const response = await fetch(`${API_URL}/api/v1/genres/${id}`);
+        const response = await fetch(`${API_URL}/genres/${id}`);
         const genre = await response.json();
         return genre;
     }
