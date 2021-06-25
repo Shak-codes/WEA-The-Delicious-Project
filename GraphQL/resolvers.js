@@ -27,7 +27,7 @@ const Query = {
     // Query for GET individual restaurant reviews by restaurant and ID
     review: async (parent, args, context, info) => {
         const { restaurant_id, review_id } = args;
-        const response = await fetch(`${API_URL}/restaurants/${restaurant_id}/reviews/${review_id}`);
+        const response = await fetch(`${API_URL}/reviews/?resId=${restaurant_id}&revId=${review_id}`);
         const review = await response.json();
         return review;
     },
