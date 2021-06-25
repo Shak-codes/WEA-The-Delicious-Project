@@ -13,7 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^2.25.2",
-    "dataloader": "^2.0.0",
     "graphql": "^15.5.1",
     "nodemon": "^2.0.7"
   }
