@@ -34,6 +34,13 @@ const Franchise = {
         const genres = await response.json();
         const genre = genres.find(g => g.name === genreName);
         return genre;
+    },
+    async locations(parent, args, context, info) {
+        const locationNames = parent.locations;
+        const response = await fetch(`${API_URL}/locations`);
+        const arrayOfLocations = await response.json();
+        const locations = arrayOfLocations.filter(l => locationNames.includes(l.name));
+        return locations;
     }
 };
 
