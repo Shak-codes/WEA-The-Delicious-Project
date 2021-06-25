@@ -35,6 +35,8 @@ const Query = {
     location: async (parent, args, context, infor) => {
         const { id } = args;
         const response = await fetch(`${API_URL}/locations/${id}`)
+        const location = await response.json();
+        return location;
     },
     // Query for GET genre by id
     genre: async (parent, args, context, info) => {
