@@ -26,7 +26,16 @@ const Query = {
     }
 };
 
-const Franchise = {};
+const Franchise = {
+    // GET genre of franchise
+    async genre(parent, args, context, info) {
+        const genreName = parent.genre;
+        const response = await fetch(`${API_URL}/genres`);
+        const genres = await response.json();
+        const genre = genres.find(g => g.name === genreName);
+        return genre;
+    }
+};
 
 const Restaurant = {};
 

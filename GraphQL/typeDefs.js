@@ -18,7 +18,7 @@ module.exports = gql`
         id: ID!
         name: String!
         description: String
-        genre: String
+        genre: Genre
         locations: [Location]
     }
 
