@@ -27,7 +27,7 @@ module.exports = gql`
     type Restaurant {
         id: ID!
         name: String!
-        location: [Location]
+        location: Location
         hours: String!
         reviews: [Review]
     }
