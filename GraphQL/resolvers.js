@@ -44,13 +44,13 @@ const Query = {
         return genre;
     },
     // Query for GET all genres
-    genres: async (parent, args, context, infor) => {
+    allGenres: async (parent, args, context, infor) => {
         const response = await fetch(`${API_URL}/genres`);
         const allGenres = await response.json();
         return allGenres;
     },
     // Query for GET all locations
-    locations: async (parent, args, context, infor) => {
+    allLocations: async (parent, args, context, infor) => {
         const response = await fetch(`${API_URL}/locations`);
         const allLocations = await response.json();
         return allLocations;
