@@ -35,6 +35,7 @@ module.exports = gql`
     type Location {
         id: ID!
         name: String!
+        restaurants: [Restaurant]
     }
 
     type Genre {

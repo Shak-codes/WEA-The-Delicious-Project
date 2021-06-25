@@ -89,6 +89,15 @@ const Restaurant = {
     }
 };
 
+const Location = {
+    async restaurants(parent, args, context, info) {
+        const locationName = parent.name;
+        const response = await fetch(`${API_URL}/restaurants`);
+        const allRestaurants = await response.json();
+        return Promise.all(allRestaurants.filter(r => r.location === locationName));
+    }
+}
+
 const Mutation = {
     // Mutation for POST review by restaurant id, review description, and review rating
     addReview: async (parent, args, context, info) => {
@@ -113,5 +122,6 @@ module.exports = {
     Query,
     Franchise,
     Restaurant,
+    Location,
     Mutation
 };
