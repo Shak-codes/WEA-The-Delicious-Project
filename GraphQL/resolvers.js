@@ -7,8 +7,13 @@ const Query = {
         const { id } = args;
         const response = await fetch(`${API_URL}/franchises/${id}`);
         const franchise = await response.json();
-        console.log(`${API_URL}/franchises/${id}`);
         return franchise;
+    },
+    allReviews: async (parent, args, context, info) => {
+        const { restaurant_id } = args;
+        const response = await fetch(`${API_URL}/restaurants/${restaurant_id}/reviews`);
+        const arrayOfReviews = await response.json();
+        return arrayOfReviews;
     }
 };
 
@@ -16,8 +21,28 @@ const Franchise = {};
 
 const Restaurant = {};
 
-const Mutation = {};
+const Mutation = {
+    addReview: async (parent, args, context, info) => {
+        const { input } = args;
+        const { restaurant_id, review_id, review_description, review_rating } = input;
+        const response = await fetch(`${API_URL}/restaurants/${restaurant_id}/reviews`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ description: review_description, rating: review_rating })
+        });
+        const review = await response.json();
+        return {
+            review: review
+        };
+    }
+};
 
 module.exports = {
-    Query
+    Query,
+    Franchise,
+    Restaurant,
+    Mutation
 };

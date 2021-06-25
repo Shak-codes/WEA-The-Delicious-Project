@@ -1,6 +1,6 @@
 const { gql } = require('apollo-server');
 
-module.exports = gql `
+module.exports = gql`
     type Query {
         franchise(id: ID!): Franchise
         restaurant(id: ID!): Restaurant
@@ -55,6 +55,8 @@ module.exports = gql `
     input addReviewDetails {
         restaurant_id: ID!
         review_id: ID!
+        review_description: String!
+        review_rating: Int!
     }
 
     type reviewAdded {
