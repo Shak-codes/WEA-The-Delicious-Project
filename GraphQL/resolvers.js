@@ -81,7 +81,7 @@ const Restaurant = {
         const locationName = parent.location;
         const response = await fetch(`${API_URL}/locations`);
         const arrayOfLocations = await response.json();
-        const location = arrayOfLocations.filter((name) => name === locationName);
+        const location = arrayOfLocations.find(l => l.name == locationName);
         return location;
     }
 };
