@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+.App {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  background: url("assets/nick-karvounis-Ciqxn7FE4vE-unsplash.jpg") rgba(40, 44, 52, 0.8);
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+h1 {
+  padding: 35vh 0 0 0;
+  margin: 0;
+  font-family: 'Yellowtail', cursive;
+  font-size: 60px;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+#get-started-button {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: whitesmoke;
+  /*background-color: #4CAF50;*/
+  text-align: center;
+  color: black;
+  border: none;
+  font-size: medium;
+  padding: 15px 32px;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+  margin: 15px;
+  width: 200px;
+}
+
+#get-started-button:hover {
+  background-color: #4CAF50;
+  /*background-color: #189b1c;*/
+  color: whitesmoke;
+}
+
+#get-started-button span {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#get-started-button span:after {
+  text-decoration: none;
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#get-started-button:hover span {
+  text-decoration: none;
+  padding-right: 25px;
+}
+
+#get-started-button:hover span:after {
+  text-decoration: none;
+  opacity: 1;
+  right: 0;
+}
+
+/* Saving any animations for later */
+/* 
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+*/
