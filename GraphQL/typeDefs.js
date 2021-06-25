@@ -8,6 +8,8 @@ module.exports = gql`
         review(restaurant_id: ID!, review_id: ID!): Review
         location(id: ID!): Location
         genre(id: ID!): Genre
+        allGenres: [Genre]
+        allLocations: [Location]
     }
 
     type AllReviews {

@@ -10,6 +10,13 @@ const Query = {
         const franchise = await response.json();
         return franchise;
     },
+    // Query for GET restaurant by id
+    restaurant: async (parent, args, context, info) => {
+        const { id } = args;
+        const response = await fetch(`${API_URL}/restaurants/${id}`);
+        const restaurant = await response.json();
+        return restaurant;
+    },
     // Query for GET all restaurant reviews
     allReviews: async (parent, args, context, info) => {
         const { restaurant_id } = args;
@@ -17,12 +24,29 @@ const Query = {
         const arrayOfReviews = await response.json();
         return arrayOfReviews;
     },
+    // Query for GET individual restaurant reviews by restaurant and ID
+    review: async (parent, args, context, info) => {
+        const { restaurant_id, review_id } = args;
+        const response = await fetch(`${API_URL}/restaurants/${restaurant_id}/reviews/${review_id}`);
+        const review = await response.json();
+        return review;
+    },
+    location: async (parent, args, context, infor) => {
+        const { id } = args;
+        const response = await fetch(`${API_URL}/locations/${id}`)
+    },
     // Query for GET genre by id
     genre: async (parent, args, context, info) => {
         const { id } = args;
         const response = await fetch(`${API_URL}/genres/${id}`);
         const genre = await response.json();
         return genre;
+    },
+    // Query for GET all genres
+    genres: async (parent, args, context, infor) => {
+        const response = await fetch(`${API_URL}/genres`);
+        const allGenres = await response.json();
+        return allGenres;
     }
 };
 
