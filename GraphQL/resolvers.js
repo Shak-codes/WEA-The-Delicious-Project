@@ -31,6 +31,7 @@ const Query = {
         const review = await response.json();
         return review;
     },
+    // Query for GET location by id
     location: async (parent, args, context, infor) => {
         const { id } = args;
         const response = await fetch(`${API_URL}/locations/${id}`)
@@ -47,6 +48,12 @@ const Query = {
         const response = await fetch(`${API_URL}/genres`);
         const allGenres = await response.json();
         return allGenres;
+    },
+    // Query for GET all locations
+    locations: async (parent, args, context, infor) => {
+        const response = await fetch(`${API_URL}/locations`);
+        const allLocations = await response.json();
+        return allLocations;
     }
 };
 
