@@ -54,7 +54,6 @@ module.exports = gql`
 
     input addReviewDetails {
         restaurant_id: ID!
-        review_id: ID!
         review_description: String!
         review_rating: Int!
     }

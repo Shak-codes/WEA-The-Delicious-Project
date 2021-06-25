@@ -14,6 +14,12 @@ const Query = {
         const response = await fetch(`${API_URL}/restaurants/${restaurant_id}/reviews`);
         const arrayOfReviews = await response.json();
         return arrayOfReviews;
+    },
+    genre: async (parent, args, context, info) => {
+        const { id } = args;
+        const response = await fetch(`${API_URL}/api/v1/genres/${id}`);
+        const genre = await response.json();
+        return genre;
     }
 };
 
@@ -24,7 +30,7 @@ const Restaurant = {};
 const Mutation = {
     addReview: async (parent, args, context, info) => {
         const { input } = args;
-        const { restaurant_id, review_id, review_description, review_rating } = input;
+        const { restaurant_id, review_description, review_rating } = input;
         const response = await fetch(`${API_URL}/restaurants/${restaurant_id}/reviews`, {
             method: 'POST',
             headers: {
