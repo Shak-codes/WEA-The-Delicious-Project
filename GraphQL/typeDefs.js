@@ -11,6 +11,7 @@ module.exports = gql`
         allGenres: [Genre]
         allLocations: [Location]
         allRestaurants: [Restaurant]
+        allFranchises: [Franchise]
     }
 
     type AllReviews {
