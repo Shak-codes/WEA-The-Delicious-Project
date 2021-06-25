@@ -40,6 +40,7 @@ module.exports = gql`
     type Genre {
         id: ID!
         name: String!
+        restaurants: [Restaurant]
     }
 
     type Review {

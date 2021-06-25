@@ -5,6 +5,12 @@ const apiData = require("../../../data");
 const app = express();
 var router = express.Router();
 
+//Endpoint for GET all restaurants
+router.get('/', (req, res) => {
+    let franchises = apiData.data.franchises;
+    res.json(franchises).status(200);
+})
+
 //Endpoint for GET Franchise by ID
 router.get('/:id', (req, res) => {
     let id = parseInt(req.params.id);

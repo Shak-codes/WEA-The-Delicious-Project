@@ -89,6 +89,21 @@ const Restaurant = {
     }
 };
 
+const Genre = {
+    async restaurants(parent, args, context, info) {
+        const genreName = parent.name;
+        const responseFranchises = await fetch(`${API_URL}/franchises`);
+        const arrayOfFranchises = await responseFranchises.json();
+        const franchises = arrayOfFranchises.filter(f => f.genre === genreName);
+
+        const franchiseNames = franchises.map(f => f.name);
+        const responseRestaurants = await fetch(`${API_URL}/restaurants`);
+        const arrayOfRestaurants = await responseRestaurants.json();
+        const restaurants = arrayOfRestaurants.filter(r => franchiseNames.includes(r.name));
+        return restaurants;
+    }
+};
+
 const Mutation = {
     // Mutation for POST review by restaurant id, review description, and review rating
     addReview: async (parent, args, context, info) => {
@@ -113,5 +128,6 @@ module.exports = {
     Query,
     Franchise,
     Restaurant,
+    Genre,
     Mutation
 };
