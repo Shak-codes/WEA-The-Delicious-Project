@@ -63,6 +63,12 @@ const Query = {
         const allRestaurants = await response.json();
         return allRestaurants;
     },
+    // Query for GET all franchises
+    allFranchises: async (parent, args, context, infor) => {
+        const response = await fetch(`${API_URL}/franchises`);
+        const allFranchises = await response.json();
+        return allFranchises;
+    }
 };
 
 const Franchise = {
