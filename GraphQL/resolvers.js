@@ -66,6 +66,7 @@ const Franchise = {
         const genre = genres.find(g => g.name === genreName);
         return genre;
     },
+    // GET locations of franchise
     async locations(parent, args, context, info) {
         const locationNames = parent.locations;
         const response = await fetch(`${API_URL}/locations`);
