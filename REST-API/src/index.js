@@ -110,7 +110,7 @@ app.post('/api/v1/restaurants/:id/reviews', (req, res) => {
         let reviews = theRestaurant.reviews;
         let revId = reviews.length + 1;
         const body = {
-            revId,
+            id: revId,
             ...req.body
         };
         apiData.data.restaurants[resId - 1].reviews.push(body);
