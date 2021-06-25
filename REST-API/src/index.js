@@ -125,6 +125,12 @@ app.post('/api/v1/restaurants/:id/reviews', (req, res) => {
     }
 })
 
+//Endpoint for Get all locations
+
+app.get('/api/v1/locations', (req, res) => {
+    res.json(apiData.data.locations).status(200);
+});
+
 //Endpoint for GET Location by ID
 app.get('/api/v1/locations/:id', (req, res) => {
     let id = parseInt(req.params.id);
@@ -134,6 +140,11 @@ app.get('/api/v1/locations/:id', (req, res) => {
         res.status(404).json({ message: `Location with ID: ${id} doesn't exist.` });
     }
     res.json(response).status(200);
+});
+
+//Endpoint for Get all genres
+app.get('/api/v1/genres', (req, res) => {
+    res.json(apiData.data.genres).status(200);
 });
 
 //Endpoint for GET genre by ID
