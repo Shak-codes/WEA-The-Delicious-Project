@@ -5,7 +5,7 @@ const apiData = require("../../../data");
 const app = express();
 var router = express.Router();
 //Endpoint for GET all restaurants
-router.get('/all', (req, res) => {
+router.get('/', (req, res) => {
     res.json(apiData.data.restaurants);
 })
 
