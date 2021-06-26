@@ -48,6 +48,7 @@ module.exports = gql`
 
     type Review {
         id: ID!
+        user: String!
         description: String
         rating: Int!
     }
