@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
             }
             let theReview = reviews.find(review => review.id === parseInt(revId));
             if (!theReview) {
-                res.status(404).json({ message: `Review with ID: ${revId} doesn't exist for restaurant with ID: ${resId}` });
+                return res.status(404).json({ message: `Review with ID: ${revId} doesn't exist for restaurant with ID: ${resId}` });
             }
             res.json(theReview).status(200);
         } else {
@@ -35,7 +35,8 @@ router.get('/', (req, res) => {
     }
 });
 
-router.put('/', (req, res) => {
+// Endpoint for PATCH (edit) review by Restaurant ID and Review ID by query
+router.patch('/', (req, res) => {
     const { resId, revId } = req.query;
     if (resId) {
         if (isNaN(resId)) {
@@ -53,21 +54,24 @@ router.put('/', (req, res) => {
             }
             let theReview = reviews.find(review => review.id === parseInt(revId));
             if (!theReview) {
-                res.status(404).json({ message: `Review with ID: ${revId} doesn't exist for restaurant with ID: ${resId}` });
+                return res.status(404).json({ message: `Review with ID: ${revId} doesn't exist for restaurant with ID: ${resId}` });
             }
-            // Create new review object
-            const newReview = {
-                id: theReview.id,
-                description: req.body.description,
-                rating: req.body.rating
-            };
-            apiData.data.restaurants[resId - 1].reviews[theReview.id - 1] = newReview;
+
+            // If PATCH body contains a description, then replace old description
+            if (req.body.description) {
+                apiData.data.restaurants[resId - 1].reviews[revId - 1].description = req.body.description;
+            }
+            // If PATCH body contain a rating, then replace old rating 
+            if (req.body.rating) {
+                apiData.data.restaurants[resId - 1].reviews[revId - 1].rating = req.body.rating;
+            }
+            // Write changes to data file
             const data = JSON.stringify(apiData, null, 2);
             fs.writeFileSync("../data.json", data, err => {
                 if (err) throw err;
                 console.log("Done Writing");
             });
-            res.json(newReview).status(200);
+            res.json(theReview).status(200);
         } else {
             res.json(reviews).status(200);
         }
