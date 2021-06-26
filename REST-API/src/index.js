@@ -1,4 +1,5 @@
 import express from 'express';
+const cors = require('cors');
 import { restart } from 'nodemon';
 const fs = require("fs");
 const apiData = require("../../data");
@@ -11,7 +12,7 @@ const genres = require("./routes/genres.js");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.json());
+app.use(cors());
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', req.headers.origin);

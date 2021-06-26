@@ -13,14 +13,14 @@
   background-blend-mode: multiply;
 }
 
-h1 {
+#home-title {
   padding: 35vh 0 0 0;
   margin: 0;
   font-family: 'Yellowtail', cursive;
   font-size: 60px;
 }
 
-h2 {
+#home-title-description {
   padding: 0;
   margin: 0;
   font-family: 'Raleway', sans-serif;
@@ -77,20 +77,4 @@ h2 {
   right: 0;
 }
 
-body {
-  background-color: #282c34;
-}
 
-/* Saving any animations for later */
-/* 
-@keyframes slideInFromTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-*/

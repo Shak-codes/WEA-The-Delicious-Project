@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap');
+
+body {
+    background: url("../../assets/nick-karvounis-Ciqxn7FE4vE-unsplash.jpg") rgba(40, 44, 52, 0.8);
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+#reviews {
+    padding-top: 0;
+    text-align: left;
+    color: whitesmoke;
+    font-family: 'B612', sans-serif;
+    padding-right: 3vw;
+    padding-left: 1vw;
+}
+
+nav {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'B612', sans-serif;
+    padding-bottom: 2.5vh;
+    border-bottom: 2px dotted white;
+}
+
+.location-link {
+    margin-top: 1vh;
+    margin-right: 1vw;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    font-size: medium;
+    padding: 2vh 8vw 2vh 8vw;
+    transition-duration: 0.4s;
+}
+
+.location-link:hover { background-color: tomato; }
+
+.location-link span {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.restaurant-title {
+    padding-top: 5vh;
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+a:hover {
+    color: grey;
+}
+
+* {
+    color: white;
+}
+
+.all-restaurants {
+    width: 80vw;
+    height: 70vh;
+    padding-left: 4vw;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 15%;
+    grid-row-gap: 5%;
+}
+
+.hide-button {
+    background-color: #61dafb;
+    color: black;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    margin-right: 5px;
+    margin-left: 2vw;
+    transition-duration: 0.4s;
+}
+  
+.hide-button:hover {
+    background-color: #2cbde6;
+}
+
+.next-review-button {
+    background-color: #61dafb;
+    color: black;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    margin-right: 5px;
+    transition-duration: 0.4s;
+}
+  
+.next-review-button:hover {
+    background-color: #2cbde6;
+}
+
+.restaurant-name {
+    margin-top: 1vh;
+    margin-bottom: 0;
+    font-size: 36px;
+    font-family: 'Raleway', sans-serif;
+    padding-left: 1vw;
+}
+
+.review-container {
+    padding-left: 2vw;
+    padding-top: 0;
+}
+
+.restaurants {
+    background-color: rgba(0, 0, 0, 0.404);
+    border-radius: 4px;
+}
+
+h4 {
+    margin-top: 0;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    margin-top: 0;
+    padding-top: 0;
+    top: 0;
+    padding-bottom: 1vh;
+}
