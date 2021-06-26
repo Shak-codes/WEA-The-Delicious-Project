@@ -143,6 +143,7 @@ const Mutation = {
             review: review
         };
     },
+    // Mutation for PATCH (edit) review by restaurant id, review id, review description, and review rating 
     editReview: async (parent, args, context, info) => {
         const { input } = args;
         const { restaurant_id, review_id, review_description, review_rating } = input;
