@@ -39,11 +39,13 @@
         "reviews": [
           {
             "id": 1,
+            "user": "Jonathan",
             "description": "Good food, good service! I highly recommend the signature coconut cream pie, it was divine.",
             "rating": 5
           },
           {
             "id": 2,
+            "user": "Allen1",
             "description": "Definitely pricey but well worth it! The food was delicious, and we had a stunning view of downtown Toronto. Reservations are a must as the place is always full.",
             "rating": 4
           }
@@ -57,11 +59,13 @@
         "reviews": [
           {
             "id": 1,
+            "user": "Tyler W",
             "description": "Service is slow at this location. Other than that, the food was decent (can't really go wrong with Popeyes). Chicken was crispy, biscuits were great. Only complaint is that the fries were soggy.",
             "rating": 3
           },
           {
             "id": 2,
+            "user": "Esther",
             "description": "If I could give no stars, I would. Staff messed up my order, and the manager was rude when I confronted him about it. Worst customer experience in my life. Also, the food was terrible, it tasted like they deep fried a rubber chicken.",
             "rating": 1
           }
@@ -75,11 +79,13 @@
         "reviews": [
           {
             "id": 1,
+            "user": "William G",
             "description": "Fantastic chicken. Always fresh and crispy.",
             "rating": 5
           },
           {
             "id": 2,
+            "user": "CoryL 123",
             "description": "We spend our money in this pandemic to give you business and try to be loyal customers. But in return we are not served up to standard.",
             "rating": 1
           }
@@ -93,11 +99,13 @@
         "reviews": [
           {
             "id": 1,
+            "user": "Andy Z",
             "description": "Food was absolutely delicious and service was attentive but not overbearing. Water was accidentally added to a vodka soda cocktail. The portion sizes are perfect",
             "rating": 4
           },
           {
             "id": 2,
+            "user": "Kevin G",
             "description": "Classic cuisine - and a local fav going back generations for good reason. Splendid wine list available even in covid lock down times. Highly recommended",
             "rating": 5
           }
@@ -111,11 +119,13 @@
         "reviews": [
           {
             "id": 1,
+            "user": "Jennifer",
             "description": "Fairly priced, lots of variety in food, great taste, I will come again.",
             "rating": 4
           },
           {
             "id": 2,
+            "user": "Gabriel",
             "description": "I drop by every week, the food is SO good.",
             "rating": 5
           }
@@ -129,11 +139,13 @@
         "reviews": [
           {
             "id": 1,
+            "user": "Alex12",
             "description": "Soggy buns and mediocre chicken. Don't get the chicken sandwich. Even better, do yourself a favour and don't eat here.",
             "rating": 1
           },
           {
             "id": 2,
+            "user": "Mark",
             "description": "Decent food, service was a little slow though.",
             "rating": 3
           }
@@ -147,11 +159,13 @@
         "reviews": [
           {
             "id": 1,
+            "user": "Shane T",
             "description": "Maybe it's just me but this Mandarin's food just isn't good. It's nothing compared to the Mandarin in Waterloo.",
             "rating": 2
           },
           {
             "id": 2,
+            "user": "Jodi",
             "description": "I've always been a sucker for Mandarin's chicken and all these years they have yet to fail me.",
             "rating": 5
           }
@@ -165,11 +179,13 @@
         "reviews": [
           {
             "id": 1,
+            "user": "Samantha",
             "description": "This Mandarin is leagues above the Mandarin from Ottawa. The food has that classic Mandarin feel, I highly recommend this place.",
             "rating": 4
           },
           {
             "id": 2,
+            "user": "ElijahR",
             "description": "The service could be better, but the food is just too good. A buffet for this good a price would make anyone happy.",
             "rating": 4
           }
@@ -183,11 +199,13 @@
         "reviews": [
           {
             "id": 1,
+            "user": "Georgio z",
             "description": "Been going to The Ace for years now and the food feels just the same as it did my first time here. Amazing.",
             "rating": 5
           },
           {
             "id": 2,
+            "user": "Blake",
             "description": "There's just no other place that can compare to this place. You're missing out if you don't eat here once in your life.",
             "rating": 5
           }
@@ -201,11 +219,13 @@
         "reviews": [
           {
             "id": 1,
+            "user": "Jamal C",
             "description": "The food is good but it doesn't strike me as anything fancy. There's a lot of places that serve comfort food just as good. Still, not a bad place to go for a meal.",
             "rating": 4
           },
           {
             "id": 2,
+            "user": "Jeff",
             "description": "Stumbled upon this place late at night and the service at the bar is amazing. Great, hard-working, passionate people work here and it really shows.",
             "rating": 5
           }
