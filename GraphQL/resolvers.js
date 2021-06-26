@@ -142,6 +142,22 @@ const Mutation = {
         return {
             review: review
         };
+    },
+    editReview: async (parent, args, context, info) => {
+        const { input } = args;
+        const { restaurant_id, review_id, review_description, review_rating } = input;
+        const response = await fetch(`${API_URL}/reviews/?resId=${restaurant_id}&revId=${review_id}`, {
+            method: 'PATCH',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ description: review_description, rating: review_rating })
+        });
+        const review = await response.json();
+        return {
+            review: review
+        };
     }
 };
 

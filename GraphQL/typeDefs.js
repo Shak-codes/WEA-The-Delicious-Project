@@ -56,6 +56,9 @@ module.exports = gql`
         addReview(
             input: addReviewDetails
         ): reviewAdded
+        editReview(
+            input: editReviewDetails
+        ): reviewEdited
     }
 
     input addReviewDetails {
@@ -65,6 +68,17 @@ module.exports = gql`
     }
 
     type reviewAdded {
+        review: Review
+    }
+
+    input editReviewDetails {
+        restaurant_id: ID!
+        review_id: ID!
+        review_description: String
+        review_rating: Int
+    }
+
+    type reviewEdited {
         review: Review
     }
 `;
