@@ -129,7 +129,7 @@ const Mutation = {
     // Mutation for POST review by restaurant id, review description, and review rating
     addReview: async (parent, args, context, info) => {
         const { input } = args;
-        const { restaurant_id, review_description, review_rating } = input;
+        const { user_id, restaurant_id, review_description, review_rating } = input;
         const response = await fetch(`${API_URL}/restaurants/${restaurant_id}/reviews`, {
             method: 'POST',
             headers: {
@@ -146,7 +146,7 @@ const Mutation = {
     // Mutation for PATCH (edit) review by restaurant id, review id, review description, and review rating 
     editReview: async (parent, args, context, info) => {
         const { input } = args;
-        const { restaurant_id, review_id, review_description, review_rating } = input;
+        const { user_id, restaurant_id, review_id, review_description, review_rating } = input;
         const response = await fetch(`${API_URL}/reviews/?resId=${restaurant_id}&revId=${review_id}`, {
             method: 'PATCH',
             headers: {

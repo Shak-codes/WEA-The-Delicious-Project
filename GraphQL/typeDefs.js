@@ -63,6 +63,7 @@ module.exports = gql`
     }
 
     input addReviewDetails {
+        user_id: ID!
         restaurant_id: ID!
         review_description: String!
         review_rating: Int!
@@ -73,6 +74,7 @@ module.exports = gql`
     }
 
     input editReviewDetails {
+        user_id: ID!
         restaurant_id: ID!
         review_id: ID!
         review_description: String
