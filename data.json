@@ -6,42 +6,28 @@
         "name": "Popeyes",
         "description": "We distinguish ourself with a unique New Orleans style menu.",
         "genre": "Fast Food",
-        "locations": [
-          "Toronto",
-          "Ottawa",
-          "Brampton"
-        ]
+        "locations": ["Toronto", "Ottawa", "Brampton"]
       },
       {
         "id": 2,
         "name": "Scaramouche",
         "description": "Sophisticated French haute cuisine in an upscale space with skyline views",
         "genre": "Fine Dining",
-        "locations": [
-          "Toronto",
-          "Ottawa"
-        ]
+        "locations": ["Toronto", "Ottawa"]
       },
       {
         "id": 3,
         "name": "The Ace",
         "description": "A restored diner serving comfort-food classics & late-night bar snacks, plus weekend brunch.",
         "genre": "Diner",
-        "locations": [
-          "Waterloo",
-          "Brampton"
-        ]
+        "locations": ["Waterloo", "Brampton"]
       },
       {
         "id": 4,
         "name": "Mandarin",
         "description": "We celebrate life’s special moments and everyday wins with high quality food, a warm atmosphere and friendly service for our customers.",
         "genre": "Buffet",
-        "locations": [
-          "Toronto",
-          "Waterloo",
-          "Ottawa"
-        ]
+        "locations": ["Toronto", "Waterloo", "Ottawa"]
       }
     ],
     "restaurants": [
