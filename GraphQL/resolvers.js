@@ -101,7 +101,7 @@ const Restaurant = {
     },
     async genre(parent, args, context, info) {
         const franchiseName = parent.name;
-        const responseFranchises = await await fetch(`${API_URL}/franchises`);
+        const responseFranchises = await fetch(`${API_URL}/franchises`);
         const franchises = await responseFranchises.json();
         const franchise = franchises.find(f => f.name === franchiseName);
 
@@ -113,7 +113,7 @@ const Restaurant = {
     },
     async description(parent, args, context, info) {
         const franchiseName = parent.name;
-        const responseFranchises = await await fetch(`${API_URL}/franchises`);
+        const responseFranchises = await fetch(`${API_URL}/franchises`);
         const franchises = await responseFranchises.json();
         const franchise = franchises.find(f => f.name === franchiseName);
 
