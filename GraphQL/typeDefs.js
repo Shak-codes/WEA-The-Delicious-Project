@@ -31,6 +31,8 @@ module.exports = gql`
         name: String!
         location: Location
         hours: String!
+        description: String
+        genre: Genre
         reviews: [Review]
     }
 

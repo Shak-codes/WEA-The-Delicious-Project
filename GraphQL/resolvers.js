@@ -98,6 +98,27 @@ const Restaurant = {
         const arrayOfLocations = await response.json();
         const location = arrayOfLocations.find(l => l.name === locationName);
         return location;
+    },
+    async genre(parent, args, context, info) {
+        const franchiseName = parent.name;
+        const responseFranchises = await await fetch(`${API_URL}/franchises`);
+        const franchises = await responseFranchises.json();
+        const franchise = franchises.find(f => f.name === franchiseName);
+
+        const genreName = franchise.genre;
+        const responseGenre = await fetch(`${API_URL}/genres`);
+        const genres = await responseGenre.json();
+        const genre = genres.find(g => g.name === genreName);
+        return genre;
+    },
+    async description(parent, args, context, info) {
+        const franchiseName = parent.name;
+        const responseFranchises = await await fetch(`${API_URL}/franchises`);
+        const franchises = await responseFranchises.json();
+        const franchise = franchises.find(f => f.name === franchiseName);
+
+        const description = franchise.description;
+        return description;
     }
 };
 
