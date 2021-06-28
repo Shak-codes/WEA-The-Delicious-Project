@@ -28,8 +28,8 @@ nav {
     margin-right: 1vw;
     cursor: pointer;
     text-decoration: none;
-    background-color: #cbdfbd;
-    color: black;
+    background-color: #326272;
+    color: white;
     border: none;
     font-size: 1.5vw;
     padding: 1.5vh 6vw 1.5vh 6vw;
@@ -76,8 +76,8 @@ h3{
 }
 
 .hide-button {
-    background-color: #dde5b6;
-    color: black;
+    background-color: #326272;
+    color: white;
     border: none;
     padding: 1vh 2vw 1vh 2vw;
     margin-right: 5px;
@@ -90,8 +90,8 @@ h3{
 }
 
 .next-review-button {
-    background-color: #dde5b6;
-    color: black;
+    background-color: #326272;
+    color: white;
     border: none;
     padding: 1vh 2vw 1vh 2vw;
     margin-right: 5px;
@@ -140,7 +140,8 @@ h3{
 }
 
 #load-reviews {
-    background-color: #99c1de;
+    background-color: #326272;
+    color: white;
     font-size: 1vw;
     margin-top: 0.5vh;
     padding-top: 0.5vh;
