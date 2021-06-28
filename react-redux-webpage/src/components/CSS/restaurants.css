@@ -105,6 +105,19 @@ h3{
     background-color: #5c9ead;
 }
 
+.add-review-threshold {
+    background-color: #00a6fb;
+    color: black;
+    border: none;
+    padding: 1vh 2vw 1vh 2vw;
+    margin-right: 5px;
+    transition-duration: 0.4s;
+}
+
+.add-review-threshold:hover {
+    background-color: #027bce;
+}
+
 /* Restaurant header CSS */
 
 /* Restaurant Info */
@@ -132,7 +145,7 @@ h3{
 #restaurant-description {
     color: #ffeaae;
     font-weight: normal;
-    line-height: 1vh;
+    line-height: 3vh;
     font-size: 1.5vw;
 }
 
@@ -187,3 +200,15 @@ h3{
     padding-right: 20vw;
 }
 
+.add-rating {
+    text-align: center;
+    width: 40vw;
+    border: none;
+    margin-bottom: 2vh;
+}
+
+.add-review-description {
+    width: 39.8vw;
+    height: 10vh;
+    border: none;
+}
