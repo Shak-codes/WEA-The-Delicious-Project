@@ -29,6 +29,7 @@ nav {
     cursor: pointer;
     text-decoration: none;
     background-color: #326272;
+    font-weight: bold;
     color: white;
     border: none;
     font-size: 1.5vw;
@@ -36,7 +37,7 @@ nav {
     transition-duration: 0.4s;
 }
 
-.location-link:hover { background-color: #99c1de; }
+.location-link:hover { background-color: #5c9ead; }
 /*
 .location-link span {
     text-decoration: none;
@@ -76,8 +77,9 @@ h3{
 }
 
 .hide-button {
+    font-weight: bold;
     background-color: #326272;
-    color: white;
+    color: #ffc100;
     border: none;
     padding: 1vh 2vw 1vh 2vw;
     margin-right: 5px;
@@ -86,12 +88,13 @@ h3{
 }
   
 .hide-button:hover {
-    background-color: #adc178;
+    background-color: #5c9ead;
 }
 
 .next-review-button {
+    font-weight: bold;
     background-color: #326272;
-    color: white;
+    color: #ffc100;
     border: none;
     padding: 1vh 2vw 1vh 2vw;
     margin-right: 5px;
@@ -99,7 +102,7 @@ h3{
 }
   
 .next-review-button:hover {
-    background-color: #adc178;
+    background-color: #5c9ead;
 }
 
 /* Restaurant header CSS */
@@ -133,6 +136,10 @@ h3{
     font-size: 1.5vw;
 }
 
+#genre-name {
+    color: white;
+}
+
 #restaurant-hours {
     color: #ffeaae;
     font-size: 1.3vw;
@@ -143,8 +150,9 @@ h3{
 }
 
 #load-reviews {
+    font-weight: bold;
     background-color: #326272;
-    color: white;
+    color: #ffc100;
     font-size: 1vw;
     margin-top: 0.5vh;
     padding-top: 0.5vh;
@@ -156,7 +164,7 @@ h3{
 }
 
 #load-reviews:hover {
-    background-color: #5fa8d3;
+    background-color: #5c9ead;
 }
 
 /* Review CSS */

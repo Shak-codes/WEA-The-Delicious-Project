@@ -1,10 +1,11 @@
 .selected-link {
-    background-color: #99c1de;
+    background-color: #5c9ead;
+    font-weight: bold;
     margin-top: 1vh;
     margin-right: 1vw;
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: white;
     border: none;
     font-size: 1.5vw;
     padding: 1.5vh 6vw 1.5vh 6vw;

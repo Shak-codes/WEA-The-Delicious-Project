@@ -109,7 +109,7 @@ const TorontoListItem = ({ restaurant }) => {
             <div className="general-data">
                 <h2 id="nested-restaurant-name">{restaurant.name}</h2>
                 <i id="restaurant-description">{restaurant.description}</i><br/>
-                <h4 id="restaurant-hours">{restaurant.genre.name} | Hours: {restaurant.hours}</h4>
+                <h4 id="restaurant-hours"><span id="genre-name">{restaurant.genre.name}</span> | Hours: {restaurant.hours}</h4>
                 <button id="load-reviews" onClick={handleLoadReviews}>Load Reviews</button>
             </div>
             
