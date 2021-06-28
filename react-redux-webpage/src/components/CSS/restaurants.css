@@ -28,7 +28,7 @@ nav {
     margin-right: 1vw;
     cursor: pointer;
     text-decoration: none;
-    background-color: #00a6fb;
+    background-color: #cbdfbd;
     color: black;
     border: none;
     font-size: 1.5vw;
@@ -36,7 +36,7 @@ nav {
     transition-duration: 0.4s;
 }
 
-.location-link:hover { background-color: #027bce; }
+.location-link:hover { background-color: #99c1de; }
 /*
 .location-link span {
     text-decoration: none;
@@ -76,7 +76,7 @@ h3{
 }
 
 .hide-button {
-    background-color: #00a6fb;
+    background-color: #dde5b6;
     color: black;
     border: none;
     padding: 1vh 2vw 1vh 2vw;
@@ -86,11 +86,11 @@ h3{
 }
   
 .hide-button:hover {
-    background-color: #027bce;
+    background-color: #adc178;
 }
 
 .next-review-button {
-    background-color: #00a6fb;
+    background-color: #dde5b6;
     color: black;
     border: none;
     padding: 1vh 2vw 1vh 2vw;
@@ -99,7 +99,7 @@ h3{
 }
   
 .next-review-button:hover {
-    background-color: #027bce;
+    background-color: #adc178;
 }
 
 /* Restaurant header CSS */
@@ -140,7 +140,7 @@ h3{
 }
 
 #load-reviews {
-    background-color: #00a6fb;
+    background-color: #99c1de;
     font-size: 1vw;
     margin-top: 0.5vh;
     padding-top: 0.5vh;
@@ -152,7 +152,7 @@ h3{
 }
 
 #load-reviews:hover {
-    background-color: #027bce;
+    background-color: #5fa8d3;
 }
 
 /* Review CSS */
