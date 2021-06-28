@@ -120,18 +120,21 @@ h3{
 
 
 #nested-restaurant-name {
+    color: #ffc100;
     font-size: 3vw;
     margin-top: 0;
     margin-bottom: 0;
 }
 
 #restaurant-description {
+    color: #ffeaae;
     font-weight: normal;
     line-height: 1vh;
     font-size: 1.5vw;
 }
 
 #restaurant-hours {
+    color: #ffeaae;
     font-size: 1.3vw;
     margin-top: 0;
     margin-bottom: 0;
