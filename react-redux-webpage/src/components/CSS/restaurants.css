@@ -107,8 +107,9 @@ h3{
 }
 
 .add-review-threshold {
-    background-color: #00a6fb;
-    color: black;
+    font-weight: bold;
+    background-color: #326272;
+    color: white;
     border: none;
     padding: 1vh 2vw 1vh 2vw;
     margin-right: 5px;
@@ -116,7 +117,7 @@ h3{
 }
 
 .add-review-threshold:hover {
-    background-color: #027bce;
+    background-color: #5c9ead;
 }
 
 /* Restaurant header CSS */
@@ -155,7 +156,7 @@ h3{
 }
 
 #restaurant-hours {
-    color: #ffeaae;
+    color:white;
     font-size: 1.3vw;
     margin-top: 0;
     margin-bottom: 0;
