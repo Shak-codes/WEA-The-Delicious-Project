@@ -13,10 +13,10 @@ function App(props) {
 
       <Switch>
 
-        <Route path="/reviews/toronto"><TorontoRestaurants/></Route>
-        <Route path="/reviews/waterloo"><h1><WaterlooRestaurants/></h1></Route>
-        <Route path="/reviews/ottawa"><h1><OttawaRestaurants/></h1></Route>
-        <Route path="/reviews/brampton"><h1><BramptonRestaurants/></h1></Route>
+        <Route path="/reviews/toronto"><TorontoRestaurants /></Route>
+        <Route path="/reviews/waterloo"><WaterlooRestaurants /></Route>
+        <Route path="/reviews/ottawa"><OttawaRestaurants /></Route>
+        <Route path="/reviews/brampton"><BramptonRestaurants /></Route>
 
         <Route path="/reviews">
           <body>
@@ -25,7 +25,7 @@ function App(props) {
         </Route>
 
         <Route path="">
-            <Home />
+          <Home />
         </Route>
 
       </Switch>
