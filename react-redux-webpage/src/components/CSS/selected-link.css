@@ -1,0 +1,20 @@
+.selected-link {
+    background-color: #027bce;
+    margin-top: 1vh;
+    margin-right: 1vw;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    border: none;
+    font-size: 1.5vw;
+    padding: 1.5vh 6vw 1.5vh 6vw;
+}
+
+
+
+.location-link span {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}

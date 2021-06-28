@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import TorontoListItem from './TorontoListItem.js';
 import "./CSS/restaurants.css";
 
@@ -26,7 +27,10 @@ const TorontoRestaurantsList = () => {
             }),
         })
         .then((response) => response.json())
-        .then((result) => setRestaurants(result.data.location.restaurants));
+        .then((result) => {
+            setRestaurants(result.data.location.restaurants);
+            console.log(result.data.location.restaurants);
+        });
     };
 
     // only runs once on component mount
@@ -36,12 +40,11 @@ const TorontoRestaurantsList = () => {
 
     return (
         <>
-            <h2 className="restaurant-title">Restaurants in Toronto</h2>
+            <h2 className="restaurant-title">Toronto</h2>
             <div className="all-restaurants">
-                {restaurants &&
-                    restaurants.map((restaurant) => ( 
-                        <TorontoListItem key={restaurant.id} restaurant={restaurant} />
-                ))}
+                <Link to="/reviews/toronto/scaramouche"><h3>{restaurants && restaurants[0].name}</h3></Link>
+                <Link to="/reviews/toronto/popeyes"><h3>{restaurants && restaurants[1].name}</h3></Link>
+                <Link to="/reviews/toronto/mandarin"><h3>{restaurants && restaurants[2].name}</h3></Link>
             </div>
         </>
     );
@@ -79,4 +82,9 @@ export default class TorontoRestaurants extends Component {
             );
         }
     }
+
+    {restaurants &&
+                    restaurants.map((restaurant) => ( 
+                        <TorontoListItem key={restaurant.id} restaurant={restaurant} />
+                ))}
 */
