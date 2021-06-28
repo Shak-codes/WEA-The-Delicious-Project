@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import AddReview from './AddReview';
 let reviewData = null;
 let len = 0;
 let current_idx = 1;
+let overall_rating = 0;
 
 const TorontoListItem = ({ restaurant }) => {
     const GQL_API = `http://localhost:3030/`;
@@ -34,6 +36,12 @@ const TorontoListItem = ({ restaurant }) => {
     // Variable to store the button to hide review descriptions
     const [deleteButton, setDeleteButton] = useState(null);
 
+    // Variable to store the button to display add review content
+    const [addReviewThreshold, setAddReviewThreshold] = useState(null);
+
+    // Variable to add review
+    const [addReviewButton, setAddReviewButton] = useState(null);
+
     // Variable to store the button to hide review descriptions
     const [nextReview, setNextReview] = useState(null);
 
@@ -46,10 +54,9 @@ const TorontoListItem = ({ restaurant }) => {
 
     // Function to load review properties
     const handleLoadReviews = () => {
-        let overall_rating = 0;
+        overall_rating = 0;
         // Store id variable
         const variables = { id: restaurant.id };
-        console.log(restaurant.id);
 
         // Setting review text
         fetch(GQL_API, {
@@ -64,13 +71,11 @@ const TorontoListItem = ({ restaurant }) => {
         })
         .then((response) => response.json())
         .then((result) => {
-            console.log(result);
             setReviewList(result.data.restaurant.reviews[0].description);
             setRatingList(result.data.restaurant.reviews[0].rating);
             setReviewUser(result.data.restaurant.reviews[0].user);
             reviewData = result.data.restaurant.reviews;
             len = reviewData.length;
-            console.log(len);
             for (let i = 0; i < len; i += 1) {
                 overall_rating += reviewData[i].rating;
                 //console.log(reviewData[i].rating);
@@ -80,10 +85,13 @@ const TorontoListItem = ({ restaurant }) => {
             //console.log(overall_rating);
             setOverallRating(overall_rating);
         });
-
+        console.log(overall_rating);
         // Setting delete button
         setDeleteButton(<button className="hide-button" onClick={handleUnloadReviews}>Hide</button>);
         setNextReview(<button className="next-review-button" onClick={handleNextReview}>Next</button>);
+        setAddReviewThreshold(<button className="add-review-threshold" onClick={showAddReviewContent}>Add Review</button>);
+        //<AddReview onAddReview={(description) => handleAddReview(description, rating)}/>
+        //<button className="add-review-threshold">Add Review</button>
     };
 
     // Function to unload review properties
@@ -92,6 +100,8 @@ const TorontoListItem = ({ restaurant }) => {
         setRatingList();
         setDeleteButton();
         setNextReview();
+        setAddReviewThreshold();
+        setAddReviewButton();
     };
 
     const handleNextReview = () => {
@@ -102,7 +112,24 @@ const TorontoListItem = ({ restaurant }) => {
         setRatingList(reviewData[current_idx].rating);
         setReviewUser(reviewData[current_idx].user);
         current_idx += 1;
+    };
+
+    const showAddReviewContent = () => {
+        setAddReviewButton(<AddReview onAddReview={(description, rating) => handleAddReview(description, rating)}/>);
     }
+
+    const handleAddReview = (description, rating) => {
+        console.log(rating);
+        const newReview = {rating: parseInt(rating), description: description, user: "Shak" };
+        const newReviewList = [...reviewData, newReview];
+        reviewData = newReviewList;
+        console.log(overall_rating);
+        let newOverallRating = ((overall_rating * len) + newReview.rating);
+        console.log(newOverallRating);
+        len += 1;
+        newOverallRating /= len;
+        setOverallRating(newOverallRating);
+    };
 
     return ( 
         <div className="restaurant-data">
@@ -128,28 +155,11 @@ const TorontoListItem = ({ restaurant }) => {
             </div>
             {deleteButton}
             {nextReview}
+            {addReviewThreshold}
+            {addReviewButton}
                 
         </div>
     );
 };
 
 export default TorontoListItem;
-
-/*
-{reviewList &&
-                    reviewList.map((restaurant) => ( 
-                    <div className="review-description" key={restaurant.id}>Rating: {restaurant.rating}/5<br/>
-                    {restaurant.description}</div>
-                ))}
-                */
-
-                /*            <h5 className="review-container">
-                {reviewList &&
-                    <div>
-                        <h4>
-                            Overall rating: {overallRating}/5<br/>
-                        </h4>
-                        Rating: {ratingList}<br/>{reviewList}
-                    </div>
-                }
-            </h5>*/
