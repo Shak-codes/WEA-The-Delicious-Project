@@ -1,5 +1,6 @@
 .selected-link {
     background-color: #5c9ead;
+    font-style: italic;
     font-weight: bold;
     margin-top: 1vh;
     margin-right: 1vw;

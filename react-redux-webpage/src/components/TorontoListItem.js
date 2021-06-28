@@ -147,7 +147,7 @@ const TorontoListItem = ({ restaurant }) => {
                             Overall rating: {overallRating}/5<br/>
                         </h2>
                         <h3 className="individual-rating">
-                            Review by user: {reviewUser} - Rating: {ratingList}<br/>{reviewList}
+                            <span className="review-user">Review by user: {reviewUser} - Rating: {ratingList}</span><br/>{reviewList}
                         </h3>
                         
                     </div>

@@ -18,12 +18,13 @@ nav {
 }
 
 #title-review {
-    color: whitesmoke;
+    color: #ffc100;
     padding-right: 5vw;
     font-size: 2vw;
 }
 
 .location-link {
+    font-style: italic;
     margin-top: 1vh;
     margin-right: 1vw;
     cursor: pointer;
@@ -57,7 +58,7 @@ h3{
 }
 #restaurant-header {
     font-size: 2vw;
-    color: white;
+    color: #ffc100;
     margin-top: 1vh;
     margin-bottom: 0;
 }
@@ -79,7 +80,7 @@ h3{
 .hide-button {
     font-weight: bold;
     background-color: #326272;
-    color: #ffc100;
+    color: white;
     border: none;
     padding: 1vh 2vw 1vh 2vw;
     margin-right: 5px;
@@ -94,7 +95,7 @@ h3{
 .next-review-button {
     font-weight: bold;
     background-color: #326272;
-    color: #ffc100;
+    color: white;
     border: none;
     padding: 1vh 2vw 1vh 2vw;
     margin-right: 5px;
@@ -165,7 +166,7 @@ h3{
 #load-reviews {
     font-weight: bold;
     background-color: #326272;
-    color: #ffc100;
+    color: white;
     font-size: 1vw;
     margin-top: 0.5vh;
     padding-top: 0.5vh;
@@ -189,6 +190,10 @@ h3{
 .overall-rating {
     margin-top: 0.5vh;
     font-size: 1.5vw;
+}
+
+.review-user {
+    color: #ffc100;
 }
 
 .individual-rating {
