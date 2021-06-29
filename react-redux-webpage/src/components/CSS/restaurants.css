@@ -18,8 +18,13 @@ nav {
 }
 
 #title-review {
+<<<<<<< Updated upstream
     color: #ffc100;
     padding-right: 5vw;
+=======
+    color: whitesmoke;
+    padding-right: 3vw;
+>>>>>>> Stashed changes
     font-size: 2vw;
 }
 
@@ -38,6 +43,7 @@ nav {
     transition-duration: 0.4s;
 }
 
+<<<<<<< Updated upstream
 .location-link:hover { background-color: #5c9ead; }
 /*
 .location-link span {
@@ -47,7 +53,31 @@ nav {
     position: relative;
     transition: 0.5s;
 }*/
+=======
+.location-link:hover { background-color: #99c1de; }
+>>>>>>> Stashed changes
 
+.login-button {
+    border: none;
+    align-self: center;
+    background-color: #99c1de;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+    resize: vertical;
+    font-size: 1.5vh;
+    transition: 0.4s
+}
+
+.login-button:hover {
+    background-color: #326272;
+}
+
+.login-input {
+    font-size: 1.5vh;
+    align-self: center;
+    resize: horizontal;
+    border: none;
+}
 /* Restaurant Navbar CSS */
 h3{
     text-decoration: none;
@@ -106,8 +136,12 @@ h3{
     background-color: #5c9ead;
 }
 
+/* Show add reviews button CSS */
 .add-review-threshold {
+<<<<<<< Updated upstream
     font-weight: bold;
+=======
+>>>>>>> Stashed changes
     background-color: #326272;
     color: white;
     border: none;
@@ -117,7 +151,11 @@ h3{
 }
 
 .add-review-threshold:hover {
+<<<<<<< Updated upstream
     background-color: #5c9ead;
+=======
+    background-color: #adc178;
+>>>>>>> Stashed changes
 }
 
 /* Restaurant header CSS */
@@ -164,6 +202,7 @@ h3{
     bottom: 0;
 }
 
+/* Load Reviews Button CSS */
 #load-reviews {
     font-weight: bold;
     background-color: #326272;
@@ -217,4 +256,15 @@ h3{
     width: 39.8vw;
     height: 10vh;
     border: none;
+<<<<<<< Updated upstream
 }
+=======
+}
+
+/* Welcome message CSS */
+.welcome-message {
+    color: white;
+    font-size: 48px;
+    text-align: center;
+}
+>>>>>>> Stashed changes

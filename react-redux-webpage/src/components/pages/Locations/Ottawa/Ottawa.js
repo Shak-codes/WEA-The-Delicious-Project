@@ -5,6 +5,7 @@ import "../../../CSS/selected-link.css";
 import OttawaScaramouche from './OttawaScaramouche';
 import OttawaPopeyes from './OttawaPopeyes';
 import OttawaMandarin from './OttawaMandarin';
+import Login from '../../../Login';
 
 function OttawaRestaurants(props) {
     // GQL API & QUERY INFORMATION
@@ -54,6 +55,7 @@ function OttawaRestaurants(props) {
                     <Link to="/reviews/waterloo"><button className="location-link" id="waterloo"><span>Waterloo</span></button></Link>
                     <Link to="/reviews/ottawa"><button className="selected-link" id="ottawa"><span>Ottawa</span></button></Link>
                     <Link to="/reviews/brampton"><button className="location-link" id="brampton"><span>Brampton</span></button></Link>
+                    <Login/>
                 </nav>
             </div>
 

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import AddReview from './AddReview';
 let reviewData = null;
-let len = 0;
-let current_idx = 1;
-let overall_rating = 0;
+
 
 const TorontoListItem = ({ restaurant }) => {
+    let len = 0;
+    let total_rating = 0;
+    let current_idx = 1;
     const GQL_API = `http://localhost:3030/`;
     const GQL_QUERY = `
         query ($id: ID!) {
@@ -20,12 +21,6 @@ const TorontoListItem = ({ restaurant }) => {
                 }
             }
         }`;
-
-    // Variable to store hours
-    const [hours, setHours] = useState(null);
-
-    // Variable to store description
-    const [description, setDescription] = useState(null);
 
     // Variable to store review descriptions
     const [reviewList, setReviewList] = useState(null);
@@ -54,7 +49,7 @@ const TorontoListItem = ({ restaurant }) => {
 
     // Function to load review properties
     const handleLoadReviews = () => {
-        overall_rating = 0;
+        total_rating = 0;
         // Store id variable
         const variables = { id: restaurant.id };
 
@@ -75,17 +70,17 @@ const TorontoListItem = ({ restaurant }) => {
             setRatingList(result.data.restaurant.reviews[0].rating);
             setReviewUser(result.data.restaurant.reviews[0].user);
             reviewData = result.data.restaurant.reviews;
+            console.log(reviewData);
             len = reviewData.length;
             for (let i = 0; i < len; i += 1) {
-                overall_rating += reviewData[i].rating;
+                total_rating += reviewData[i].rating;
                 //console.log(reviewData[i].rating);
             }
             //console.log(overall_rating);
-            overall_rating /= len;
             //console.log(overall_rating);
-            setOverallRating(overall_rating);
+            setOverallRating(total_rating / len);
         });
-        console.log(overall_rating);
+        console.log(total_rating);
         // Setting delete button
         setDeleteButton(<button className="hide-button" onClick={handleUnloadReviews}>Hide</button>);
         setNextReview(<button className="next-review-button" onClick={handleNextReview}>Next</button>);
@@ -120,15 +115,29 @@ const TorontoListItem = ({ restaurant }) => {
 
     const handleAddReview = (description, rating) => {
         console.log(rating);
-        const newReview = {rating: parseInt(rating), description: description, user: "Shak" };
+        const newReview = {id: len + 1, user: localStorage.username, description: description, rating: parseInt(rating) };
         const newReviewList = [...reviewData, newReview];
         reviewData = newReviewList;
-        console.log(overall_rating);
-        let newOverallRating = ((overall_rating * len) + newReview.rating);
-        console.log(newOverallRating);
         len += 1;
-        newOverallRating /= len;
+        console.log(total_rating);
+        total_rating += newReview.rating;
+        let newOverallRating = (total_rating / len);
         setOverallRating(newOverallRating);
+
+        fetch(`http://localhost:3000/api/v1/restaurants/${restaurant.id}/reviews`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                user: localStorage.username,
+                description: description,
+                rating: parseInt(rating),
+            }),
+        })
+        .then((response) => response.json())
+        .then((result) => console.log(result));
     };
 
     return ( 

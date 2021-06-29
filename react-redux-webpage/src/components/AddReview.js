@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-let valid_description = true;
-let valid_rating = true;
+let valid_description = false;
+let valid_rating = false;
+let valid_user = false;
 let notValid = true;
 
 const AddReview = (props) => {
@@ -11,12 +12,15 @@ const AddReview = (props) => {
     const handleChangeReview = (event) => {
         setReviewDescription(event.target.value);
         if (event.target.value === '') {
-            valid_description = true;
-            checkValidReview();
-        } else {
             valid_description = false;
-            checkValidReview();
+        } else {
+            valid_description = true;
         }
+        if (localStorage.username === '') {
+            console.log("username blank:");
+            valid_user = false;
+        } else valid_user = true;
+        checkValidReview();
     };
 
     const handleAddReview = () => {
@@ -26,16 +30,19 @@ const AddReview = (props) => {
     const handleChangeRating = (event) => {
         setRating(event.target.value);
         if (event.target.value === '') {
-            valid_rating = true;
-            checkValidReview();
-        } else {
             valid_rating = false;
-            checkValidReview();
+        } else {
+            valid_rating = true;
         }
+        if (localStorage.username === '') {
+            console.log("username blank:");
+            valid_user = false;
+        } else valid_user = true;
+        checkValidReview();
     };
 
     const checkValidReview = () => {
-        if (valid_description === false && valid_rating === false) {
+        if (valid_description === true && valid_rating === true && valid_user === true) {
             notValid = false;
         } else notValid = true;
     }
@@ -50,7 +57,7 @@ const AddReview = (props) => {
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-            <textarea maxlength="400" cols="80" rows="6" name="review-description" className="add-review-description" type='text' value={reviewDescription} placeholder="Your review here" onChange={handleChangeReview} />
+            <textarea maxLength="400" cols="80" rows="6" name="review-description" className="add-review-description" type='text' value={reviewDescription} placeholder="Your review here" onChange={handleChangeReview} />
             <button disabled={notValid} onClick={handleAddReview}>Submit Review</button>
         </div>
     );

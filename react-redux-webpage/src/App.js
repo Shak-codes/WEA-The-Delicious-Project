@@ -10,7 +10,8 @@ import BramptonRestaurants from './components/pages/Locations/Brampton/Brampton'
 function App(props) {
   return (
     <Router>
-
+      
+      <body>
       <Switch>
 
         <Route path="/reviews/toronto"><TorontoRestaurants /></Route>
@@ -19,9 +20,7 @@ function App(props) {
         <Route path="/reviews/brampton"><BramptonRestaurants /></Route>
 
         <Route path="/reviews">
-          <body>
             <Review />
-          </body>
         </Route>
 
         <Route path="">
@@ -29,6 +28,8 @@ function App(props) {
         </Route>
 
       </Switch>
+      
+      </body>
 
     </Router>
   );
