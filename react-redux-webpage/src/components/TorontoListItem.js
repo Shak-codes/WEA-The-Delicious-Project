@@ -78,7 +78,7 @@ const TorontoListItem = ({ restaurant }) => {
             }
             //console.log(overall_rating);
             //console.log(overall_rating);
-            setOverallRating(total_rating / len);
+            setOverallRating((total_rating / len).toFixed(1));
         });
         console.log(total_rating);
         // Setting delete button

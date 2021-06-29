@@ -20,8 +20,8 @@ function Review(props) {
                 <Link to="/reviews/brampton"><button className="location-link" id="brampton"><span>Brampton</span></button></Link>
                 <Login/>
             </nav>
-
-            <h2 className="welcome-message">Welcome{localStorage.username}, Please select a location to view restaurants</h2>
+            
+            <h2 className="welcome-message">Welcome{localStorage.getItem('username')}, Please select a location to view restaurants</h2>
         </div>
     );
 }
