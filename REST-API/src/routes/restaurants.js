@@ -6,7 +6,7 @@ const app = express();
 var router = express.Router();
 //Endpoint for GET all restaurants
 router.get('/', (req, res) => {
-    res.json(apiData.data.restaurants);
+    res.json(apiData.data.restaurants).status(200);
 })
 
 //Endpoint for GET Restaurant by ID
@@ -56,6 +56,7 @@ router.get('/:resId/reviews/:revId', (req, res) => {
 
     res.json(response).status(200);
 });
+
 //Endpoint for POST Individual review by Restaurant and Review ID
 router.post('/:id/reviews', (req, res) => {
     let resId = parseInt(req.params.id);

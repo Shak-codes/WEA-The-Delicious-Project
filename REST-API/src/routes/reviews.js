@@ -73,7 +73,7 @@ router.patch('/', (req, res) => {
             });
             res.json(theReview).status(200);
         } else {
-            res.json(reviews).status(200);
+            return res.status(400).json({ message: `Cannot query review without review ID`});
         }
     } else {
         return res.status(400).json({ message: `Cannot query review without restaurant ID` });
