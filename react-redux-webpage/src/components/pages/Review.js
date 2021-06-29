@@ -10,9 +10,9 @@ function Review(props) {
         welcomeMessage = <h2 className="welcome-message">Welcome new user, Please select a location to view restaurants or login with your username</h2>;
     }
     else {
-        welcomeMessage = <h2 className="welcome-message">Welcome{user}, Please select a location to view restaurants</h2>;
+        welcomeMessage = <h2 className="welcome-message">Welcome {user}, Please select a location to view restaurants</h2>;
     }
-    
+
     return (
         <div id="location-links">
             <nav>
