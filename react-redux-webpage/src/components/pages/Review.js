@@ -3,12 +3,6 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import "../CSS/restaurants.css";
 import Login from '../Login';
 
-const user = () => {
-    if (localStorage.getItem('username') != null) {
-        localStorage.setItem('username', ' ' + localStorage.getItem('username'));
-    }
-}
-
 function Review(props) {
     let welcomeMessage;
     let user = localStorage.getItem('username');
@@ -18,6 +12,7 @@ function Review(props) {
     else {
         welcomeMessage = <h2 className="welcome-message">Welcome{user}, Please select a location to view restaurants</h2>;
     }
+    
     return (
         <div id="location-links">
             <nav>
@@ -32,7 +27,5 @@ function Review(props) {
         </div>
     );
 }
-
-user();
 
 export default Review;
