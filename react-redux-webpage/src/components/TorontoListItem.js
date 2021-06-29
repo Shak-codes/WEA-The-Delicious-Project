@@ -146,7 +146,7 @@ const TorontoListItem = ({ restaurant }) => {
         console.log(total_rating);
         total_rating += newReview.rating;
         let newOverallRating = (total_rating / len);
-        setOverallRating(newOverallRating);
+        setOverallRating(newOverallRating.toFixed(1));
 
         fetch(`http://localhost:3000/api/v1/restaurants/${restaurant.id}/reviews`, {
             method: 'POST',
