@@ -9,7 +9,7 @@ function Login() {
     }
 
     const handleLogin = () => {
-        localStorage.username = username;
+        localStorage.setItem('username', username);
         console.log(localStorage.username);
     }
 
