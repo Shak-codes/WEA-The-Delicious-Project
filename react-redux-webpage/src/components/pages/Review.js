@@ -4,8 +4,8 @@ import "../CSS/restaurants.css";
 import Login from '../Login';
 
 const user = () => {
-    if (localStorage.username !== '') {
-        localStorage.username = ' ' + localStorage.username;
+    if (localStorage.getItem('username') != null) {
+        localStorage.setItem('username', ' ' + localStorage.getItem('username'));
     }
 }
 
