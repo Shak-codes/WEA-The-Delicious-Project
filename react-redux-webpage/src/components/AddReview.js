@@ -65,7 +65,7 @@ const AddReview = (props) => {
     return (
         <div>
             <select className="add-rating" name="rating" value={rating} onChange={handleChangeRating}>
-                <option disabled selected value> Rating </option>
+                <option disabled selected value=""> Rating </option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
