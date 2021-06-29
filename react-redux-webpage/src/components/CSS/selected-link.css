@@ -1,3 +1,4 @@
+/* selected location link CSS */
 .selected-link {
     background-color: #5c9ead;
     font-style: italic;
@@ -11,8 +12,6 @@
     font-size: 1.5vw;
     padding: 1.5vh 6vw 1.5vh 6vw;
 }
-
-
 
 .location-link span {
     text-decoration: none;

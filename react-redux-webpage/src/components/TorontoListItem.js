@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { createSlice } from '@reduxjs/toolkit'
+import { useSelector, useDispatch } from 'react-redux'
 import AddReview from './AddReview';
 let reviewData = null;
+let totalReviews = 0;
 
 
 const TorontoListItem = ({ restaurant }) => {
@@ -46,6 +49,25 @@ const TorontoListItem = ({ restaurant }) => {
     // Variable to store review user
     const [reviewUser, setReviewUser] = useState(null);
 
+    // Function to get total reviews
+    const reviewTotal = () => {
+        const variables = { id: restaurant.id };
+
+        fetch(GQL_API, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                query: GQL_QUERY,
+                variables
+            }),
+        })
+        .then((response) => response.json())
+        .then((result) => {
+            totalReviews = result.data.restaurant.reviews.length;
+        })
+    };
 
     // Function to load review properties
     const handleLoadReviews = () => {
@@ -72,6 +94,7 @@ const TorontoListItem = ({ restaurant }) => {
             reviewData = result.data.restaurant.reviews;
             console.log(reviewData);
             len = reviewData.length;
+            totalReviews = len;
             for (let i = 0; i < len; i += 1) {
                 total_rating += reviewData[i].rating;
                 //console.log(reviewData[i].rating);
@@ -110,7 +133,7 @@ const TorontoListItem = ({ restaurant }) => {
     };
 
     const showAddReviewContent = () => {
-        setAddReviewButton(<AddReview onAddReview={(description, rating) => handleAddReview(description, rating)}/>);
+        setAddReviewButton(<AddReview onClick={add} onAddReview={(description, rating) => handleAddReview(description, rating)}/>);
     }
 
     const handleAddReview = (description, rating) => {
@@ -119,6 +142,7 @@ const TorontoListItem = ({ restaurant }) => {
         const newReviewList = [...reviewData, newReview];
         reviewData = newReviewList;
         len += 1;
+        totalReviews = len;
         console.log(total_rating);
         total_rating += newReview.rating;
         let newOverallRating = (total_rating / len);
@@ -140,6 +164,16 @@ const TorontoListItem = ({ restaurant }) => {
         .then((result) => console.log(result));
     };
 
+    reviewTotal();
+    const { increment } = counterSlice.actions;
+    let count = useSelector((state) => state.counter.value + totalReviews)
+    const dispatch = useDispatch()
+  
+    function combine() {
+      test();
+    }
+    const add = () => dispatch(increment());
+
     return ( 
         <div className="restaurant-data">
             <div className="general-data">
@@ -153,7 +187,7 @@ const TorontoListItem = ({ restaurant }) => {
             {reviewList &&
                     <div className="restaurant-ratings">
                         <h2 className="overall-rating">
-                            Overall rating: {overallRating}/5<br/>
+                            Total reviews: {count} | Overall rating: {overallRating}/5<br/>
                         </h2>
                         <h3 className="individual-rating">
                             <span className="review-user">Review by user: {reviewUser} - Rating: {ratingList}</span><br/>{reviewList}
@@ -171,4 +205,21 @@ const TorontoListItem = ({ restaurant }) => {
     );
 };
 
+const counterSlice = createSlice({
+    name: 'counter',
+    initialState: {
+        value: totalReviews,
+    },
+    reducers: {
+        increment: (state) => {
+            // Redux Toolkit allows us to write "mutating" logic in reducers. It
+            // doesn't actually mutate the state because it uses the Immer library,
+            // which detects changes to a "draft state" and produces a brand new
+            // immutable state based off those changes
+            state.value += 1
+        },
+    },
+})
+
 export default TorontoListItem;
+export const counterReducer = counterSlice.reducer;
