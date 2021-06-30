@@ -62,18 +62,6 @@
             "user": "Allen1",
             "description": "Definitely pricey but well worth it! The food was delicious, and we had a stunning view of downtown Toronto. Reservations are a must as the place is always full.",
             "rating": 4
-          },
-          {
-            "id": 3,
-            "user": "Allie",
-            "description": "THEY ADDED BURGERS. ITS SO GOOD",
-            "rating": 5
-          },
-          {
-            "id": 4,
-            "user": "Aron",
-            "description": "Absolutely outstanding",
-            "rating": 5
           }
         ]
       },
@@ -94,12 +82,6 @@
             "user": "Esther",
             "description": "If I could give no stars, I would. Staff messed up my order, and the manager was rude when I confronted him about it. Worst customer experience in my life. Also, the food was terrible, it tasted like they deep fried a rubber chicken.",
             "rating": 1
-          },
-          {
-            "id": 3,
-            "user": "Shak",
-            "description": "It was very good!",
-            "rating": 5
           }
         ]
       },

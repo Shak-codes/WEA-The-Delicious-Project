@@ -137,7 +137,6 @@ const TorontoListItem = ({ restaurant }) => {
     }
 
     const handleAddReview = (description, rating) => {
-        console.log(rating);
         const newReview = {id: len + 1, user: localStorage.username, description: description, rating: parseInt(rating) };
         const newReviewList = [...reviewData, newReview];
         reviewData = newReviewList;

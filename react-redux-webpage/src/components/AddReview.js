@@ -12,24 +12,29 @@ let valid_user = false;
 // Variable for check if a review can be submitted
 let notValid = true;
 
+
+
 const AddReview = (props) => {
 
-    // Variable for review description
+    // Variable for raw review description
     const [reviewDescription, setReviewDescription] = useState('');
+
+    // Variable for edited review description
+    const [editedReviewDescription, setEditedReviewDescription] = useState('');
 
     // Variable for rating
     const [rating, setRating] = useState('');
 
-    // Function to 
+    // Function to process review text
     const handleChangeReview = (event) => {
         setReviewDescription(event.target.value);
+        createValidDescription();
         if (event.target.value === '') {
             valid_description = false;
         } else {
             valid_description = true;
         }
         if (localStorage.username === '') {
-            console.log("username blank:");
             valid_user = false;
         } else valid_user = true;
         checkValidReview();
@@ -37,7 +42,8 @@ const AddReview = (props) => {
 
     // Function for adding review on button click
     const handleAddReview = () => {
-        props.onAddReview(reviewDescription, rating);
+        console.log(editedReviewDescription);
+        props.onAddReview(editedReviewDescription, rating);
     }
 
     // Function for setting the rating to the input
@@ -54,6 +60,26 @@ const AddReview = (props) => {
         } else valid_user = true;
         checkValidReview();
     };
+
+    // Function for ensuring a review description is formatted correctly
+    const createValidDescription = () => {
+        let review = reviewDescription;
+        let newReviewDescription = '';
+        let nonBlank = 0;
+        for (let i = 0; i < review.length; i++) {
+            if (nonBlank === 15) {
+                newReviewDescription += ' ';
+                nonBlank = 0;
+            }
+            if (review.charAt(i) !== ' ') {
+                nonBlank += 1;
+            } else nonBlank = 0;
+            newReviewDescription += review.charAt(i);
+            console.log(i);
+            console.log(review.charAt(i));
+        }
+        setEditedReviewDescription(newReviewDescription);
+    }
 
     // Function for checking if a review is valid
     const checkValidReview = () => {
