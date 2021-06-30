@@ -10,7 +10,7 @@ const TorontoListItem = ({ restaurant }) => {
     let len = 0;
     let total_rating = 0;
     let current_idx = 1;
-    const GQL_API = `http://localhost:3030/`;
+    const GQL_API = `https://wea-group33-graphql.herokuapp.com/`;
     const GQL_QUERY = `
         query ($id: ID!) {
             restaurant(id: $id) {
@@ -147,7 +147,7 @@ const TorontoListItem = ({ restaurant }) => {
         let newOverallRating = (total_rating / len);
         setOverallRating(newOverallRating.toFixed(1));
 
-        fetch(`http://localhost:3000/api/v1/restaurants/${restaurant.id}/reviews`, {
+        fetch(`https://wea-group33-restapi.herokuapp.com/api/v1/restaurants/${restaurant.id}/reviews`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

@@ -4,7 +4,7 @@ import TorontoListItem from '../../../TorontoListItem';
 function OttawaMandarin(props) {
 
     // GQL API & QUERY INFORMATION
-    const GQL_API = `http://localhost:3030/`
+    const GQL_API = `https://wea-group33-graphql.herokuapp.com/`
     const GQL_QUERY = `
         query {
             location(id: 3) {
