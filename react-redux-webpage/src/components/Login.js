@@ -17,8 +17,8 @@ function Login() {
     }
 
     // Test function for debugging if needed
-    const showUsername = () => {
-        console.log(localStorage.username);
+    const deleteUsername = () => {
+        localStorage.clear(username);
     }
 
     // Return login component

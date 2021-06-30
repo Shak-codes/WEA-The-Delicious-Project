@@ -7,6 +7,7 @@ function Review(props) {
     let welcomeMessage;
     let user = localStorage.getItem('username');
     if (user === null || user === "") {
+        localStorage.setItem('username', '');
         welcomeMessage = <h2 className="welcome-message">Welcome new user, Please select a location to view restaurants or login with your username</h2>;
     }
     else {
