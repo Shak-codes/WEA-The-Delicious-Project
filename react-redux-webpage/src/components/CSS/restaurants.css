@@ -102,8 +102,22 @@ h3 {
 
 /* Individual restaurant link */
 .restaurant-link {
+    vertical-align: middle;
+    margin: 0 auto;
+    padding: 2vh 0;
     font-size: 1.5vw;
     color: white;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.restaurant-link:hover {
+    color: black;
+    background-color: #ffeaae;
+    border-radius: 1px;
+}
+
+a {
     text-decoration: none;
 }
 
