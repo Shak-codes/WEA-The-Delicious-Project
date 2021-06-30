@@ -1,6 +1,6 @@
 const { responsePathAsArray } = require('graphql');
 const fetch = require('node-fetch');
-const API_URL = 'http://localhost:3000/api/v1';
+const API_URL = 'https://wea-group33-restapi.herokuapp.com/api/v1';
 
 const Query = {
     // Query for GET franchise by id

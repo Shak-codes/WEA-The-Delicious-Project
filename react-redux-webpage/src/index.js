@@ -7,15 +7,13 @@ import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <body>
-    <React.StrictMode>
-      
-      <Provider store={store}>
-        <App />
-      </Provider>
+  <React.StrictMode>
     
-    </React.StrictMode>
-  </body>,
+    <Provider store={store}>
+      <App />
+    </Provider>
+  
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

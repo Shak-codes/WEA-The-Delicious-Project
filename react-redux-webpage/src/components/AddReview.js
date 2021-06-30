@@ -19,16 +19,11 @@ const AddReview = (props) => {
     // Variable for raw review description
     const [reviewDescription, setReviewDescription] = useState('');
 
-    // Variable for edited review description
-    const [editedReviewDescription, setEditedReviewDescription] = useState('');
-
     // Variable for rating
     const [rating, setRating] = useState('');
 
     // Function to process review text
     const handleChangeReview = (event) => {
-        //setReviewDescription(event.target.value);
-        //createValidDescription();
         createValidDescription(event);
         if (event.target.value === '') {
             valid_description = false;
@@ -44,8 +39,6 @@ const AddReview = (props) => {
     // Function for adding review on button click
     const handleAddReview = () => {
         props.onAddReview(reviewDescription, rating);
-        // console.log(editedReviewDescription);
-        // props.onAddReview(editedReviewDescription, rating);
     }
 
     // Function for setting the rating to the input
@@ -72,15 +65,16 @@ const AddReview = (props) => {
             if (nonBlank === 60) {
                 newReviewDescription += ' ';
                 nonBlank = 0;
-            }
-            if (review.charAt(i) !== ' ') {
+            } else if (review.charAt(i) !== ' ') {
                 newReviewDescription += review.charAt(i);
                 nonBlank += 1;
-            } else nonBlank = 0;
+            } else {
+                newReviewDescription += review.charAt(i);
+                nonBlank = 0;
+            }
             console.log(i);
             console.log(review.charAt(i));
         }
-        //setEditedReviewDescription(newReviewDescription);
         setReviewDescription(newReviewDescription);
     }
 
@@ -89,6 +83,12 @@ const AddReview = (props) => {
         if (valid_description === true && valid_rating === true && valid_user === true) {
             notValid = false;
         } else notValid = true;
+    }
+
+    // Function for alerting a user their review has been successfully added
+    const alertUser = () => {
+        handleAddReview();
+        alert('Review submitted!');
     }
 
     return (
@@ -102,7 +102,7 @@ const AddReview = (props) => {
                 <option value="5">5</option>
             </select>
             <textarea maxLength="400" cols="80" rows="6" name="review-description" className="add-review-description" type='text' value={reviewDescription} placeholder="Your review here" onChange={handleChangeReview} />
-            <button disabled={notValid} onClick={handleAddReview}>Submit Review</button>
+            <button disabled={notValid} onClick={alertUser}>Submit Review</button>
         </div>
     );
 };

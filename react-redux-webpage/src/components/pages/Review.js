@@ -4,6 +4,8 @@ import "../CSS/restaurants.css";
 import Login from '../Login';
 
 function Review(props) {
+
+    // Code for welcome message
     let welcomeMessage;
     let user = localStorage.getItem('username');
     if (user === null || user === "") {

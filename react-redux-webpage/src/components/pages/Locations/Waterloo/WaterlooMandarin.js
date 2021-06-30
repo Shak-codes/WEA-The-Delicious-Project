@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import TorontoListItem from '../../../TorontoListItem';
+import RestaurantListItem from '../../../RestaurantListItem';
 
 function WaterlooMandarin(props) {
 
@@ -49,7 +49,7 @@ function WaterlooMandarin(props) {
     return (
         <div id="waterloo-mandarin-content">
             {restaurants && restaurants.map((restaurant) => (
-                            <TorontoListItem key={restaurant.id} restaurant={restaurant} />))}
+                            <RestaurantListItem key={restaurant.id} restaurant={restaurant} />))}
         </div>
     );
 }

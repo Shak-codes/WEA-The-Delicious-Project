@@ -11,7 +11,6 @@ function App(props) {
   return (
     <Router>
       
-      <body>
       <Switch>
 
         <Route path="/reviews/toronto"><TorontoRestaurants /></Route>
@@ -29,8 +28,6 @@ function App(props) {
 
       </Switch>
       
-      </body>
-
     </Router>
   );
 }

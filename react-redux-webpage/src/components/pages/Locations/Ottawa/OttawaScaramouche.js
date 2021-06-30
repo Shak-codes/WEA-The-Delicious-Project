@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import TorontoListItem from '../../../TorontoListItem';
+import RestaurantListItem from '../../../RestaurantListItem';
 
 function OttawaScaramouche(props) {
 
@@ -49,7 +49,7 @@ function OttawaScaramouche(props) {
     return (
         <div id="ottawa-scaramouche-content">
             {restaurants && restaurants.map((restaurant) => (
-                            <TorontoListItem key={restaurant.id} restaurant={restaurant} />))}
+                            <RestaurantListItem key={restaurant.id} restaurant={restaurant} />))}
         </div>
     );
 }

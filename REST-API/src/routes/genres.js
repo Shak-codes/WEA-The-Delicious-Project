@@ -1,6 +1,6 @@
 import express from 'express';
 const fs = require("fs");
-const apiData = require("../../../data");
+const apiData = require("../../data.json");
 
 const app = express();
 var router = express.Router();

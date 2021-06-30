@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import TorontoListItem from '../../../TorontoListItem';
+import RestaurantListItem from '../../../RestaurantListItem';
 
 function OttawaPopeyes(props) {
 
@@ -49,7 +49,7 @@ function OttawaPopeyes(props) {
     return (
         <div id="ottawa-popeyes-content">
             {restaurants && restaurants.map((restaurant) => (
-                            <TorontoListItem key={restaurant.id} restaurant={restaurant} />))}
+                            <RestaurantListItem key={restaurant.id} restaurant={restaurant} />))}
         </div>
     );
 }
