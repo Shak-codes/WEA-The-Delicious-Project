@@ -27,8 +27,9 @@ const AddReview = (props) => {
 
     // Function to process review text
     const handleChangeReview = (event) => {
-        setReviewDescription(event.target.value);
-        createValidDescription();
+        //setReviewDescription(event.target.value);
+        //createValidDescription();
+        createValidDescription(event);
         if (event.target.value === '') {
             valid_description = false;
         } else {
@@ -42,8 +43,9 @@ const AddReview = (props) => {
 
     // Function for adding review on button click
     const handleAddReview = () => {
-        console.log(editedReviewDescription);
-        props.onAddReview(editedReviewDescription, rating);
+        props.onAddReview(reviewDescription, rating);
+        // console.log(editedReviewDescription);
+        // props.onAddReview(editedReviewDescription, rating);
     }
 
     // Function for setting the rating to the input
@@ -62,23 +64,24 @@ const AddReview = (props) => {
     };
 
     // Function for ensuring a review description is formatted correctly
-    const createValidDescription = () => {
-        let review = reviewDescription;
+    const createValidDescription = (event) => {
+        let review = event.target.value;
         let newReviewDescription = '';
         let nonBlank = 0;
         for (let i = 0; i < review.length; i++) {
-            if (nonBlank === 15) {
+            if (nonBlank === 60) {
                 newReviewDescription += ' ';
                 nonBlank = 0;
             }
             if (review.charAt(i) !== ' ') {
+                newReviewDescription += review.charAt(i);
                 nonBlank += 1;
             } else nonBlank = 0;
-            newReviewDescription += review.charAt(i);
             console.log(i);
             console.log(review.charAt(i));
         }
-        setEditedReviewDescription(newReviewDescription);
+        //setEditedReviewDescription(newReviewDescription);
+        setReviewDescription(newReviewDescription);
     }
 
     // Function for checking if a review is valid
