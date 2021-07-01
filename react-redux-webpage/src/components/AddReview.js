@@ -62,7 +62,7 @@ const AddReview = (props) => {
         let newReviewDescription = '';
         let nonBlank = 0;
         for (let i = 0; i < review.length; i++) {
-            if (nonBlank === 60) {
+            if (nonBlank === 30) {
                 newReviewDescription += ' ';
                 nonBlank = 0;
             } else if (review.charAt(i) !== ' ') {
@@ -102,7 +102,7 @@ const AddReview = (props) => {
                 <option value="5">5</option>
             </select>
             <textarea maxLength="400" cols="80" rows="6" name="review-description" className="add-review-description" type='text' value={reviewDescription} placeholder="Your review here" onChange={handleChangeReview} />
-            <button disabled={notValid} onClick={alertUser}>Submit Review</button>
+            <button id="submit-review" disabled={notValid} onClick={alertUser}>Submit Review</button>
         </div>
     );
 };

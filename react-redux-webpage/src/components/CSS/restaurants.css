@@ -131,13 +131,12 @@ a {
     border: none;
     padding: 1vh 2vw 1vh 2vw;
     margin-right: 5px;
-    margin-left: 1vw;
     transition-duration: 0.4s;
 }
   
 /* Hide button CSS on hover */
 .hide-button:hover {
-    background-color: #5c9ead;
+    background-color: #adc178;
 }
 
 /* Button for loading next review CSS */
@@ -153,7 +152,7 @@ a {
   
 /* Button for loading next review: on hover CSS */
 .next-review-button:hover {
-    background-color: #5c9ead;
+    background-color: #adc178;
 }
 
 /* Show submit review button CSS */
@@ -287,4 +286,22 @@ a {
     color: white;
     font-size: 48px;
     text-align: center;
+}
+
+/* Submit button CSS */
+#submit-review {
+    background-color: #326272;
+    color: white;
+    font-size: 1vw;
+    margin-top: 0.5vh;
+    padding-top: 0.5vh;
+    padding-left: 16.7vw;
+    padding-right: 16.7vw;
+    padding-bottom: 0.5vh;
+    border: none;
+    transition: 0.4s;
+}
+
+#submit-review:hover {
+    background-color: #adc178;
 }
